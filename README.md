@@ -17,7 +17,7 @@ I wonder if maybe we should look at N5 instead? they're still available, and als
 
 Fine by me as long as they are supported :)
 
-Step 0 - Bootable text-based system (pier?)
+*Step 0 - Bootable text-based system (pier?)
 
 Definitions: at this stage, we have something we can flash to target HW, and can boot, but can't really do anything useful with
 
@@ -31,7 +31,7 @@ git where, git.merproject.org? btw home:plfiorini:maui:devel builds on top mer-c
 
 this is part of the "not easy to work with" thing, that's one place, there's also e.g. https://github.com/mer-packages/, mer-hybris, mer-qt (though probably not needed if you're using 5.3), etc
 
-Step 1 - HADK-based setup (pier/robin?)
+*Step 1 - HADK-based setup (pier/robin?)
 
 Definitions: at this stage, we have something we can run basic graphical tests on (e.g. minimer, qmlscene, whatever) on top of the framebuffer, no Wayland necessarily at the start)
 
@@ -41,7 +41,7 @@ Time to reach: ETA October ~15?
 
 -> pier/robin?
 
-Step 2 - Simple compositor (pier/robin?)
+*Step 2 - Simple compositor (pier/robin?)
 
 Definitions: at this stage, we boot to a simple compositor which can display Wayland clients
 
@@ -51,7 +51,7 @@ The compositor, at this stage, will simply display at least one single fullscree
 
 We expect that Plasma will display as a fullscreen thing, and "own" the homescreen, but this may not happen in time for step 2's completion
 
-Step 3 - KDE Frameworks (pier/robin?)
+*Step 3 - KDE Frameworks (pier/robin?)
 
 Check if a Plasma session is already capable of running on QML compositor
 
@@ -63,7 +63,7 @@ maui uses qml to style its ui, since the plasma guys are finally working on usin
 
 maybe eike can help bring the patch come to life, later we can build packages without qtwidgets for arm and the phone shell will be using qml styles; anyway for a prototype it might be good as it is now
 
-Step 4 - Telephony MW (pier/robin?)
+*Step 4 - Telephony MW (pier/robin?)
 
 Definitions: at this stage, we integrate the available pieces to get telephony working, if we didn't have them already
 
@@ -76,7 +76,7 @@ ofono-ril
 ofono-qt (ofono -> Qt bindings)
 voicecall-manager (provides ofono -> QML bindings)
 
-Step 5 - Telephony UI (eike?)
+*Step 5 - Telephony UI (eike?)
 
 Definitions: at this stage, we end up with a basic dialer that can send (and maybe recieve) phonecalls
 
@@ -105,7 +105,7 @@ qtwayland client protocol
 
 Compositor side
 
-Open questions:
+*Open questions:
 
 How's Plasma's Wayland port looking? (current status: preparing to get more manpower spread across tasks, martin g. responsible, see: https://todo.kde.org/?controller=board&action=show&project_id=2  - needs kde.org ident for login)
 
