@@ -1,6 +1,11 @@
 How to flash Plasma Phone on Nexus 5
 ====================================
 
+Useful information can be found here:
+
+* https://wiki.merproject.org/wiki/Building_Sailfish_OS_for_Nexus_5
+* http://releases.sailfishos.org/sfa-ea/2014-07-21_SailfishOSHardwareAdaptationDevelopmentKit.pdf
+
 Download images
 ---------------
 
