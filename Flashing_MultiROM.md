@@ -107,7 +107,7 @@ Go to the store, install MultiROM Manager and run it.
 
 Grant permission when asked.
 
-Install update, recovery and "CM 11 (4.4.3 - 4.4.4)" kernel.
+Install update, recovery and "Stock 4.4.3 - 4.4.4" kernel.
 
 Reboot when asked.
 
