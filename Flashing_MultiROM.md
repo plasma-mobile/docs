@@ -115,8 +115,8 @@ Reboot when asked.
 
 Download the following files:
 
-* Latest Plasma Phone image: http://build.maui-project.org/maui-lge-hammerhead-0.6.0-20141007.zip
 * CyanogenMod 11 M9: http://download.cyanogenmod.org/get/jenkins/78753/cm-11-20140805-SNAPSHOT-M9-hammerhead.zip
+* Latest Plasma Phone image: http://build.maui-project.org/phone/maui-armv7hl-lge-hammerhead-milestone1/maui-lge-hammerhead-0.6.0.zip
 
 Upload the CM release:
 
@@ -127,7 +127,7 @@ adb push cm-11-20140805-SNAPSHOT-M9-hammerhead.zip /sdcard/
 Upload Plasma Phone:
 
 ```sh
-adb push maui-lge-hammerhead-0.6.0-20141007.zip /sdcard/
+adb push maui-lge-hammerhead-0.6.0.zip /sdcard/
 ```
 
 * In the Recovery on the device:
