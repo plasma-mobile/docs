@@ -8,9 +8,13 @@ Useful information can be found here:
 * http://releases.sailfishos.org/sfa-ea/2014-07-21_SailfishOSHardwareAdaptationDevelopmentKit.pdf
 * http://schier.co/post/how-to-root-nexus-5-in-ubuntu-linux
 
+## Prerequisites
+
+The device must be connected to the Linux host with the USB cable all the time.
+
 ## Update Android
 
-Update to the latest version.
+Update to the latest 4.4 release.
 
 ## Enable developer mode and USB debugging
 
@@ -25,6 +29,12 @@ Update to the latest version.
 ## Configure Linux
 
 Install Android tools.
+
+On Ubuntu do:
+
+```sh
+sudo apt-get install android-tools
+```
 
 Connect the device and type:
 
@@ -118,20 +128,50 @@ Download the following files:
 * CyanogenMod 11 M9: http://download.cyanogenmod.org/get/jenkins/78753/cm-11-20140805-SNAPSHOT-M9-hammerhead.zip
 * Latest Plasma Phone image: http://build.maui-project.org/phone/maui-armv7hl-lge-hammerhead-milestone1/maui-lge-hammerhead-0.6.0.zip
 
-Upload the CM release:
+## Flash images
+
+Go in recovery:
+
+* Power off the phone
+* Keep volume down and power pressed together until the bootloader is shown
+  (the bootloader has an android with the lid open like this: http://www.androidcentral.com/sites/androidcentral.com/files/postimages/684/android-az-bootloader.jpg)
+* Press volume up or volume down until the "Restart to recovery" option appears
+* Confirm pressing the power button
+
+Upload the CM release running this from the Linux host:
 
 ```sh
 adb push cm-11-20140805-SNAPSHOT-M9-hammerhead.zip /sdcard/
 ```
 
-Upload Plasma Phone:
+Upload Plasma Phone running this from the Linux host:
 
 ```sh
 adb push maui-lge-hammerhead-0.6.0.zip /sdcard/
 ```
 
-* In the Recovery on the device:
-  - Clear data and cache (factory reset)
-  - Install the CM release by picking the CM image
-  - Install Plasma Phone by picking its image
-  - Reboot the device
+Go into the multirom interface:
+
+* Tap "Advanced"
+* Tap "MultiROM"
+* Tap "Add ROM"
+* Select "SailfishOS" radio button
+* Tap "Next"
+* Tap "Cyanogenmod Zip file"
+* Select cm-11-20140805-SNAPSHOT-M9-hammerhead.zip from /sdcard
+* Tap "Rootfs ZIP file"
+* Select maui-lge-hammerhead-0.6.0.zip from /sdcard
+* Tap "Install"
+* Swipe to confirm
+* Tap "Reboot system"
+* From the ROM selector pick "maui-lge-hammerhead-0.6.0"
+
+## Connect to the device via SSH
+
+The phone listen to the 192.168.2.15 IP and offers a debug telnet on port 2323 and ssh.
+
+Connect using ssh as maui user (password is maui):
+
+```sh
+ssh maui@192.168.2.15
+```
