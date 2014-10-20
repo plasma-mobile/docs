@@ -1,0 +1,116 @@
+[maui@localhost minimer]$ /usr/lib/qt5/bin/qmlscene main.qml
+HOOKS hooks.c:1526 (get_hooked_symbol) DEBUG: __pthread_gettid -2
+
+EGLFS: Screen Info
+ - Physical size: QSizeF(62, 110)
+ - Screen size: QSize(1080, 1920)
+ - Screen depth: 32
+EGL eglplatform_hwcomposer.cpp:35 (void hwcomposerws_init_module(ws_egl_interface*)) DEBUG: ** gralloc_open 0xb3cfc004 status=Success
+== hwcomposer module ==
+ * Address: 0xb3b24004
+ * Module API Version: 2
+ * HAL API Version: 0
+ * Identifier: hwcomposer
+ * Name: Qualcomm Hardware Composer Module
+ * Author: CodeAurora Forum
+== hwcomposer module ==
+== hwcomposer device ==
+ * Version: 1030001 (interpreted as 1030001)
+ * Module: 0xb3b24004
+== hwcomposer device ==
+QEglScreen 0x1e7c8c0
+
+QEglWindow 0x1ffac00: 0x1ff9298 0x0
+
+EGL nativewindowbase.cpp:86 (BaseNativeWindow::BaseNativeWindow()) DEBUG: this=0x1ffae00 or A 0x1ffae04
+EGL hwcomposer_window.cpp:433 (virtual int HWComposerNativeWindow::setBufferCount(int)) DEBUG: cnt=2
+EGL hwcomposer_window.cpp:97 (void HWComposerNativeWindow::destroyBuffers()) DEBUG: 
+EGL nativewindowbase.cpp:25 (BaseNativeWindowBuffer::BaseNativeWindowBuffer()) DEBUG: 0x1ffaeb0
+EGL hwcomposer_window.cpp:57 (HWComposerNativeWindowBuffer::HWComposerNativeWindowBuffer(alloc_device_t*, unsigned int, unsigned int, unsigned int, unsigned int)) DEBUG: width=1080 height=1920 stride=1152 format=x1 usage=x1800 status=Success this=0x1ffaeb0
+EGL nativewindowbase.cpp:75 (static void BaseNativeWindowBuffer::_incRef(android_native_base_t*)) DEBUG: 0x1ffaeb0 refcount = 1
+EGL hwcomposer_window.cpp:449 (virtual int HWComposerNativeWindow::setBufferCount(int)) DEBUG: buffer 0 is at 0x1ffaeb0 (native 0x1ffaeb4),err=Success, handle=0x1ffaf40 stride=1152
+EGL nativewindowbase.cpp:25 (BaseNativeWindowBuffer::BaseNativeWindowBuffer()) DEBUG: 0x1ffaf98
+EGL hwcomposer_window.cpp:57 (HWComposerNativeWindowBuffer::HWComposerNativeWindowBuffer(alloc_device_t*, unsigned int, unsigned int, unsigned int, unsigned int)) DEBUG: width=1080 height=1920 stride=1152 format=x1 usage=x1800 status=Success this=0x1ffaf98
+EGL nativewindowbase.cpp:75 (static void BaseNativeWindowBuffer::_incRef(android_native_base_t*)) DEBUG: 0x1ffaf98 refcount = 1
+EGL hwcomposer_window.cpp:449 (virtual int HWComposerNativeWindow::setBufferCount(int)) DEBUG: buffer 1 is at 0x1ffaf98 (native 0x1ffaf9c),err=Success, handle=0x1ffb018 stride=1152
+EGL nativewindowbase.cpp:148 (static void BaseNativeWindow::_incRef(android_native_base_t*)) DEBUG: 0x1ffae00 refcount = 1
+EGL nativewindowbase.cpp:312 (static int BaseNativeWindow::_perform(ANativeWindow*, int, ...)) DEBUG: operation = NATIVE_WINDOW_API_CONNECT
+EGL nativewindowbase.cpp:369 (static int BaseNativeWindow::_perform(ANativeWindow*, int, ...)) DEBUG: api connect
+EGL nativewindowbase.cpp:312 (static int BaseNativeWindow::_perform(ANativeWindow*, int, ...)) DEBUG: operation = NATIVE_WINDOW_SET_BUFFERS_FORMAT
+EGL hwcomposer_window.cpp:419 (virtual int HWComposerNativeWindow::setBuffersFormat(int)) DEBUG: format=x1 realloc=0
+EGL hwcomposer_window.cpp:120 (virtual int HWComposerNativeWindow::setSwapInterval(int)) DEBUG: interval=1 WARN STUB
+EGL nativewindowbase.cpp:269 (static int BaseNativeWindow::_query(const ANativeWindow*, int, int*)) DEBUG: window:0x1ffae04 2 NATIVE_WINDOW_FORMAT 0xbe84e72c
+EGL hwcomposer_window.cpp:324 (virtual unsigned int HWComposerNativeWindow::format() const) DEBUG: format=x1
+EGL nativewindowbase.cpp:148 (static void BaseNativeWindow::_incRef(android_native_base_t*)) DEBUG: 0x1ffae00 refcount = 2
+EGL nativewindowbase.cpp:312 (static int BaseNativeWindow::_perform(ANativeWindow*, int, ...)) DEBUG: operation = NATIVE_WINDOW_SET_USAGE
+EGL hwcomposer_window.cpp:401 (virtual int HWComposerNativeWindow::setUsage(int)) DEBUG: usage=x202 realloc=1
+EGL hwcomposer_window.cpp:433 (virtual int HWComposerNativeWindow::setBufferCount(int)) DEBUG: cnt=2
+EGL hwcomposer_window.cpp:97 (void HWComposerNativeWindow::destroyBuffers()) DEBUG: 
+EGL nativewindowbase.cpp:60 (static void BaseNativeWindowBuffer::_decRef(android_native_base_t*)) DEBUG: 0x1ffaeb0 refcount = 0
+EGL hwcomposer_window.cpp:64 (virtual HWComposerNativeWindowBuffer::~HWComposerNativeWindowBuffer()) DEBUG: 0x1ffaeb0
+EGL nativewindowbase.cpp:47 (virtual BaseNativeWindowBuffer::~BaseNativeWindowBuffer()) DEBUG: 0x1ffaeb0
+EGL nativewindowbase.cpp:60 (static void BaseNativeWindowBuffer::_decRef(android_native_base_t*)) DEBUG: 0x1ffaf98 refcount = 0
+EGL hwcomposer_window.cpp:64 (virtual HWComposerNativeWindowBuffer::~HWComposerNativeWindowBuffer()) DEBUG: 0x1ffaf98
+EGL nativewindowbase.cpp:47 (virtual BaseNativeWindowBuffer::~BaseNativeWindowBuffer()) DEBUG: 0x1ffaf98
+EGL nativewindowbase.cpp:25 (BaseNativeWindowBuffer::BaseNativeWindowBuffer()) DEBUG: 0x1ffaeb0
+EGL hwcomposer_window.cpp:57 (HWComposerNativeWindowBuffer::HWComposerNativeWindowBuffer(alloc_device_t*, unsigned int, unsigned int, unsigned int, unsigned int)) DEBUG: width=1080 height=1920 stride=1152 format=x1 usage=x1a02 status=Success this=0x1ffaeb0
+EGL nativewindowbase.cpp:75 (static void BaseNativeWindowBuffer::_incRef(android_native_base_t*)) DEBUG: 0x1ffaeb0 refcount = 1
+EGL hwcomposer_window.cpp:449 (virtual int HWComposerNativeWindow::setBufferCount(int)) DEBUG: buffer 0 is at 0x1ffaeb0 (native 0x1ffaeb4),err=Success, handle=0x1ffaf40 stride=1152
+EGL nativewindowbase.cpp:25 (BaseNativeWindowBuffer::BaseNativeWindowBuffer()) DEBUG: 0x1ffaf98
+EGL hwcomposer_window.cpp:57 (HWComposerNativeWindowBuffer::HWComposerNativeWindowBuffer(alloc_device_t*, unsigned int, unsigned int, unsigned int, unsigned int)) DEBUG: width=1080 height=1920 stride=1152 format=x1 usage=x1a02 status=Success this=0x1ffaf98
+EGL nativewindowbase.cpp:75 (static void BaseNativeWindowBuffer::_incRef(android_native_base_t*)) DEBUG: 0x1ffaf98 refcount = 1
+EGL hwcomposer_window.cpp:449 (virtual int HWComposerNativeWindow::setBufferCount(int)) DEBUG: buffer 1 is at 0x1ffaf98 (native 0x1ffaf9c),err=Success, handle=0x1ffb018 stride=1152
+EGL nativewindowbase.cpp:269 (static int BaseNativeWindow::_query(const ANativeWindow*, int, int*)) DEBUG: window:0x1ffae04 2 NATIVE_WINDOW_FORMAT 0xbe84e714
+EGL hwcomposer_window.cpp:324 (virtual unsigned int HWComposerNativeWindow::format() const) DEBUG: format=x1
+EGL nativewindowbase.cpp:269 (static int BaseNativeWindow::_query(const ANativeWindow*, int, int*)) DEBUG: window:0x1ffae04 6 NATIVE_WINDOW_DEFAULT_WIDTH 0xbe84e6c8
+EGL hwcomposer_window.cpp:352 (virtual unsigned int HWComposerNativeWindow::defaultWidth() const) DEBUG: width=1080
+EGL nativewindowbase.cpp:269 (static int BaseNativeWindow::_query(const ANativeWindow*, int, int*)) DEBUG: window:0x1ffae04 7 NATIVE_WINDOW_DEFAULT_HEIGHT 0xbe84e6cc
+EGL hwcomposer_window.cpp:341 (virtual unsigned int HWComposerNativeWindow::defaultHeight() const) DEBUG: height=1920
+EGL nativewindowbase.cpp:269 (static int BaseNativeWindow::_query(const ANativeWindow*, int, int*)) DEBUG: window:0x1ffae04 2 NATIVE_WINDOW_FORMAT 0x1ffb240
+EGL hwcomposer_window.cpp:324 (virtual unsigned int HWComposerNativeWindow::format() const) DEBUG: format=x1
+EGL nativewindowbase.cpp:269 (static int BaseNativeWindow::_query(const ANativeWindow*, int, int*)) DEBUG: window:0x1ffae04 8 NATIVE_WINDOW_TRANSFORM_HINT 0x1ffb278
+EGL hwcomposer_window.cpp:382 (virtual unsigned int HWComposerNativeWindow::transformHint() const) DEBUG: 
+EGL nativewindowbase.cpp:312 (static int BaseNativeWindow::_perform(ANativeWindow*, int, ...)) DEBUG: operation = NATIVE_WINDOW_SET_BUFFERS_DIMENSIONS
+EGL hwcomposer_window.cpp:481 (virtual int HWComposerNativeWindow::setBuffersDimensions(int, int)) DEBUG: WARN: stub. size=1080x1920
+EGL nativewindowbase.cpp:148 (static void BaseNativeWindow::_incRef(android_native_base_t*)) DEBUG: 0x1ffae00 refcount = 3
+EGL nativewindowbase.cpp:269 (static int BaseNativeWindow::_query(const ANativeWindow*, int, int*)) DEBUG: window:0x1ffae04 2 NATIVE_WINDOW_FORMAT 0xaf6fb81c
+EGL hwcomposer_window.cpp:324 (virtual unsigned int HWComposerNativeWindow::format() const) DEBUG: format=x1
+EGL nativewindowbase.cpp:269 (static int BaseNativeWindow::_query(const ANativeWindow*, int, int*)) DEBUG: window:0x1ffae04 2 NATIVE_WINDOW_FORMAT 0xaf6fb9bc
+EGL hwcomposer_window.cpp:324 (virtual unsigned int HWComposerNativeWindow::format() const) DEBUG: format=x1
+EGL nativewindowbase.cpp:269 (static int BaseNativeWindow::_query(const ANativeWindow*, int, int*)) DEBUG: window:0x1ffae04 2 NATIVE_WINDOW_FORMAT 0xaf6fb9bc
+EGL hwcomposer_window.cpp:324 (virtual unsigned int HWComposerNativeWindow::format() const) DEBUG: format=x1
+EGL hwcomposer_window.cpp:120 (virtual int HWComposerNativeWindow::setSwapInterval(int)) DEBUG: interval=0 WARN STUB
+EGL hwcomposer_window.cpp:161 (virtual int HWComposerNativeWindow::dequeueBuffer(BaseNativeWindowBuffer**, int*)) DEBUG: Status: Buffer 0x1ffaeb0 with busy 0
+
+EGL hwcomposer_window.cpp:161 (virtual int HWComposerNativeWindow::dequeueBuffer(BaseNativeWindowBuffer**, int*)) DEBUG: Status: Buffer 0x1ffaf98 with busy 0
+
+EGL hwcomposer_window.cpp:172 (virtual int HWComposerNativeWindow::dequeueBuffer(BaseNativeWindowBuffer**, int*)) DEBUG: Found a free non-front buffer
+EGL hwcomposer_window.cpp:192 (virtual int HWComposerNativeWindow::dequeueBuffer(BaseNativeWindowBuffer**, int*)) DEBUG: 2943337472 DONE --> 0x1ffaeb0
+EGL nativewindowbase.cpp:75 (static void BaseNativeWindowBuffer::_incRef(android_native_base_t*)) DEBUG: 0x1ffaeb0 refcount = 2
+EGL nativewindowbase.cpp:75 (static void BaseNativeWindowBuffer::_incRef(android_native_base_t*)) DEBUG: 0x1ffaeb0 refcount = 3
+EGL nativewindowbase.cpp:312 (static int BaseNativeWindow::_perform(ANativeWindow*, int, ...)) DEBUG: operation = NATIVE_WINDOW_SET_BUFFERS_TRANSFORM
+EGL nativewindowbase.cpp:341 (static int BaseNativeWindow::_perform(ANativeWindow*, int, ...)) DEBUG: set buffers transform
+EGL hwcomposer_window.cpp:220 (virtual int HWComposerNativeWindow::queueBuffer(BaseNativeWindowBuffer*, int)) DEBUG: 2943337472 24
+EGL hwcomposer_window.cpp:233 (virtual int HWComposerNativeWindow::queueBuffer(BaseNativeWindowBuffer*, int)) DEBUG: 2943337472 0x1ffaeb0 0x1ffaeb0
+EGL nativewindowbase.cpp:269 (static int BaseNativeWindow::_query(const ANativeWindow*, int, int*)) DEBUG: window:0x1ffae04 6 NATIVE_WINDOW_DEFAULT_WIDTH 0xaf6fbaa0
+EGL hwcomposer_window.cpp:352 (virtual unsigned int HWComposerNativeWindow::defaultWidth() const) DEBUG: width=1080
+EGL nativewindowbase.cpp:269 (static int BaseNativeWindow::_query(const ANativeWindow*, int, int*)) DEBUG: window:0x1ffae04 7 NATIVE_WINDOW_DEFAULT_HEIGHT 0xaf6fbaa4
+EGL hwcomposer_window.cpp:341 (virtual unsigned int HWComposerNativeWindow::defaultHeight() const) DEBUG: height=1920
+EGL nativewindowbase.cpp:269 (static int BaseNativeWindow::_query(const ANativeWindow*, int, int*)) DEBUG: window:0x1ffae04 2 NATIVE_WINDOW_FORMAT 0x1ffb240
+EGL hwcomposer_window.cpp:324 (virtual unsigned int HWComposerNativeWindow::format() const) DEBUG: format=x1
+EGL nativewindowbase.cpp:269 (static int BaseNativeWindow::_query(const ANativeWindow*, int, int*)) DEBUG: window:0x1ffae04 8 NATIVE_WINDOW_TRANSFORM_HINT 0x1ffb278
+EGL hwcomposer_window.cpp:382 (virtual unsigned int HWComposerNativeWindow::transformHint() const) DEBUG: 
+EGL nativewindowbase.cpp:312 (static int BaseNativeWindow::_perform(ANativeWindow*, int, ...)) DEBUG: operation = NATIVE_WINDOW_SET_BUFFERS_DIMENSIONS
+EGL hwcomposer_window.cpp:481 (virtual int HWComposerNativeWindow::setBuffersDimensions(int, int)) DEBUG: WARN: stub. size=1080x1920
+EGL hwcomposer_window.cpp:156 (virtual int HWComposerNativeWindow::dequeueBuffer(BaseNativeWindowBuffer**, int*)) DEBUG: Status: Has front buf 0x1ffaeb0
+EGL hwcomposer_window.cpp:161 (virtual int HWComposerNativeWindow::dequeueBuffer(BaseNativeWindowBuffer**, int*)) DEBUG: Status: Buffer 0x1ffaeb0 with busy 0
+
+EGL hwcomposer_window.cpp:161 (virtual int HWComposerNativeWindow::dequeueBuffer(BaseNativeWindowBuffer**, int*)) DEBUG: Status: Buffer 0x1ffaf98 with busy 0
+
+EGL hwcomposer_window.cpp:172 (virtual int HWComposerNativeWindow::dequeueBuffer(BaseNativeWindowBuffer**, int*)) DEBUG: Found a free non-front buffer
+EGL hwcomposer_window.cpp:192 (virtual int HWComposerNativeWindow::dequeueBuffer(BaseNativeWindowBuffer**, int*)) DEBUG: 2943337472 DONE --> 0x1ffaf98
+EGL nativewindowbase.cpp:75 (static void BaseNativeWindowBuffer::_incRef(android_native_base_t*)) DEBUG: 0x1ffaf98 refcount = 2
+EGL nativewindowbase.cpp:75 (static void BaseNativeWindowBuffer::_incRef(android_native_base_t*)) DEBUG: 0x1ffaf98 refcount = 3
+EGL nativewindowbase.cpp:312 (static int BaseNativeWindow::_perform(ANativeWindow*, int, ...)) DEBUG: operation = NATIVE_WINDOW_SET_BUFFERS_TRANSFORM
+EGL nativewindowbase.cpp:341 (static int BaseNativeWindow::_perform(ANativeWindow*, int, ...)) DEBUG: set buffers transform
+EGL hwcomposer_window.cpp:220 (virtual int HWComposerNativeWindow::queueBuffer(BaseNativeWindowBuffer*, int)) DEBUG: 2943337472 24
