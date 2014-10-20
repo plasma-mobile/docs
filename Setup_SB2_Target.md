@@ -33,5 +33,9 @@ sb2-init -d -L "--sysroot=/" -C "--sysroot=/" \
 
 sb2 -t $VENDOR-$DEVICE-armv7hl -m sdk-install -R rpm --rebuilddb
 
+sb2 -t $VENDOR-$DEVICE-armv7hl -m sdk-install -R zypper ar \
+    -G http://repo.merproject.org/obs/home:/plfiorini:/maui:/devel:/hw:/droid:/tools/latest_armv7hl/ \
+    maui-hw-droid-tools
+
 sb2 -t $VENDOR-$DEVICE-armv7hl -m sdk-install -R zypper ref --force
 ```
