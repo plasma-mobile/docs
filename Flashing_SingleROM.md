@@ -10,7 +10,7 @@ Useful information can be found here:
 
 ## Prerequisites
 
-The device must be connected to the Linux host with the USB cable all the time.
+The device must be connected to the Linux host with the USB cable all the time, unless told to reconnect.
 
 ## Configure Linux
 
@@ -64,10 +64,6 @@ sudo adb devices
 
 your device will be listed.
 
-## Boot Android
-
-Boot Android for the first time and procede with the configuration wizard.
-
 ## Unlock the device
 
 Go to the bootloader:
@@ -90,8 +86,7 @@ Now reboot:
 sudo fastboot reboot
 ```
 
-Since unlocking wipes data, Android will restart the first time wizard, but
-you will not need to complete it, just power off the phone.
+Since unlocking wipes data, Android will restart the first time wizard. Let the wizard come up, then press Power button to just power off the phone, you will not need to complete the wizard.
 
 ## Install TWRP
 
@@ -107,7 +102,7 @@ Go to the bootloader:
 * Keep volume down and power pressed together until the bootloader is shown
   (the bootloader has an android with the lid open like this: http://www.androidcentral.com/sites/androidcentral.com/files/postimages/684/android-az-bootloader.jpg)
 
-Now from the Linx host type:
+Now from the Linx host type (make sure the img-file is in the same directory where you start the command):
 
 ```sh
 sudo fastboot flash recovery openrecovery-twrp-2.8.0.1-hammerhead.img
