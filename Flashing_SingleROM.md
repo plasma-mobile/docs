@@ -114,7 +114,8 @@ Now:
 * Confirm pressing the power button
 
 TWRP will now install (this might take a while).
-Once installed, The TWRP screen will appear.
+
+Once installed, the TWRP main menu screen will appear.
 
 ## Download images
 
@@ -132,7 +133,7 @@ From the TWRP main menu:
 * Select all items
 * Swipe to Wipe
 * Tap "Back"
-* Tap the "home" (house) symbol in lower left corner
+* Tap the "Home" symbol (=small house) in lower left corner
 
 Upload the CM release running this from the Linux host:
 
