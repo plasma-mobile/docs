@@ -93,9 +93,7 @@ Since unlocking wipes data, Android will restart the first time wizard. Let the 
 TWRP is an alternative recovery image that offers a lot of flexibility
 and will be used to install Plasma Mobile.
 
-Download the latest version: http://techerrata.com/file/twrp2/hammerhead/
-
-or grab the "known-to-work" file here: http://build.maui-project.org/phone/openrecovery-twrp-2.8.0.1-hammerhead.img
+Download TWRP version: http://build.maui-project.org/phone/openrecovery-twrp-2.8.0.1-hammerhead.img
 
 We assume that at this point the phone is off.
 
