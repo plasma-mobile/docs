@@ -166,10 +166,16 @@ From the TWRP main menu:
 
 ## Connect to the device via SSH
 
-The phone listen to the 192.168.2.15 IP and offers a debug telnet on port 2323 and ssh.
+Now the phone seems to be actually stuck just showing the Google logo and unlocked key symbol below.
+
+That is normal, as no graphical stack has been installed with the milestone 1 kit.
+
+But you can actually connect to the device, as the phone listen to the 192.168.2.15 IP and offers a debug telnet on port 2323 and ssh.
 
 Connect using ssh as user: "maui" (password is also "maui"):
 
 ```sh
 ssh maui@192.168.2.15
 ```
+
+Congratulations! You have at this point succesfully established root access and a complete new system on your Nexus 5! 
