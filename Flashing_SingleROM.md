@@ -117,6 +117,14 @@ TWRP will now install (this might take a while).
 
 Once installed, the TWRP main menu screen will appear.
 
+## Root phone
+
+* Tab Reboot
+* Tab Recovery
+* Swipe to Reboot
+* If asked to Install SuperSU, swipe to confirm and root you phone
+
+
 ## Download images
 
 Download the following files:
