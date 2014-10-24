@@ -143,13 +143,13 @@ From the TWRP main menu:
 * Tap "Back"
 * Tap the "Home" symbol (=small house) in lower left corner
 
-Upload the CM release running this from the Linux host:
+Upload the CM release running this from the Linux host (this can take a while without output on the screen):
 
 ```sh
 sudo adb push cm-11-20140805-SNAPSHOT-M9-hammerhead.zip /sdcard/
 ```
 
-Upload Plasma Phone running this from the Linux host:
+Upload Plasma Phone running this from the Linux host (again wait to finish):
 
 ```sh
 sudo adb push maui-lge-hammerhead-0.6.0.zip /sdcard/
@@ -161,7 +161,7 @@ From the TWRP main menu:
 * Select cm-11-20140805-SNAPSHOT-M9-hammerhead.zip from /sdcard
 * Tap "Add More Zips"
 * Select maui-lge-hammerhead-0.6.0.zip from /sdcard
-* Swipe to confirm flash
+* Swipe to confirm flash (this can take a while, watch the messages for errors)
 * Tap "Reboot system"
 
 ## Connect to the device via SSH
