@@ -178,4 +178,4 @@ Connect using ssh as user: "maui" (password is also "maui"):
 ssh maui@192.168.2.15
 ```
 
-Congratulations! You have at this point succesfully established root access and a complete new system on your Nexus 5! 
+Congratulations! You have at this point succesfully established root access on a completely new and free basic system on your Nexus 5! 
