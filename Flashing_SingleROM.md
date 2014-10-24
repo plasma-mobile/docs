@@ -168,7 +168,7 @@ From the TWRP main menu:
 
 The phone listen to the 192.168.2.15 IP and offers a debug telnet on port 2323 and ssh.
 
-Connect using ssh as maui user (password is maui):
+Connect using ssh as user: "maui" (password is also "maui"):
 
 ```sh
 ssh maui@192.168.2.15
