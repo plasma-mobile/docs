@@ -110,10 +110,11 @@ sudo fastboot flash recovery openrecovery-twrp-2.8.0.1-hammerhead.img
 
 Now:
 
-* Press volume up or volume down until the "Restart to recovery" option appears
+* Press volume up or volume down until the "Recovery Mode" option appears
 * Confirm pressing the power button
 
-TWRP will now install (this might take a while), please note that it will reboot into stock Android on its own.
+TWRP will now install (this might take a while).
+Once installed, The TWRP screen will appear.
 
 ## Download images
 
@@ -131,7 +132,7 @@ From the TWRP main menu:
 * Select all items
 * Swipe to Wipe
 * Tap "Back"
-* Tap home
+* Tap the "home" (house) symbol in lower left corner
 
 Upload the CM release running this from the Linux host:
 
