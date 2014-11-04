@@ -131,7 +131,7 @@ Download the following files:
 
 * CyanogenMod 11 M9: http://download.cyanogenmod.org/get/jenkins/78753/cm-11-20140805-SNAPSHOT-M9-hammerhead.zip
 * Plasma Phone Milestone 1 image (only access via ssh): http://build.maui-project.org/phone/maui-lge-hammerhead-0.1.0.zip
-* Plasma Phone Milestone 2 image (graphical shell): http://build.maui-project.org/phone/maui-lge-hammerhead-0.2.0.zip
+
 
 ## Flash images
 
@@ -143,6 +143,53 @@ From the TWRP main menu:
 * Swipe to Wipe
 * Tap "Back"
 * Tap the "Home" symbol (=small house) in lower left corner
+
+Upload the CM release running this from the Linux host (this can take a while without output on the screen):
+
+```sh
+sudo adb push cm-11-20140805-SNAPSHOT-M9-hammerhead.zip /sdcard/
+```
+
+Upload Plasma Phone running this from the Linux host (again wait to finish):
+
+```sh
+sudo adb push maui-lge-hammerhead-0.1.0.zip /sdcard/
+```
+
+From the TWRP main menu:
+
+* Tap "Install"
+* Select cm-11-20140805-SNAPSHOT-M9-hammerhead.zip from /sdcard
+* Tap "Add More Zips"
+* Select maui-lge-hammerhead-0.1.0.zip from /sdcard
+* Swipe to confirm flash (this can take a while, watch the messages for errors)
+* Tap "Reboot system"
+
+## Connect to the device via SSH
+
+Now the phone seems to be actually stuck just showing the Google logo and unlocked key symbol below.
+
+That is normal, as no graphical stack has been installed with the milestone 1 kit.
+
+But you can actually connect to the device, as the phone listen to the 192.168.2.15 IP and offers a debug telnet on port 2323 and ssh.
+
+Connect using ssh as user: "maui" (password is also "maui"):
+
+```sh
+ssh maui@192.168.2.15
+```
+
+Congratulations! You have at this point succesfully established root access on a completely new and free basic system on your Nexus 5! 
+
+
+## Milestone 2 (boot into graphical shell)
+
+Download:
+
+* Plasma Phone Milestone 2 image (graphical shell): http://build.maui-project.org/phone/maui-lge-hammerhead-0.2.0.zip
+
+
+From the TWRP main menu:
 
 Upload the CM release running this from the Linux host (this can take a while without output on the screen):
 
@@ -165,18 +212,4 @@ From the TWRP main menu:
 * Swipe to confirm flash (this can take a while, watch the messages for errors)
 * Tap "Reboot system"
 
-## Connect to the device via SSH
 
-Now the phone seems to be actually stuck just showing the Google logo and unlocked key symbol below.
-
-That is normal, as no graphical stack has been installed with the milestone 1 kit.
-
-But you can actually connect to the device, as the phone listen to the 192.168.2.15 IP and offers a debug telnet on port 2323 and ssh.
-
-Connect using ssh as user: "maui" (password is also "maui"):
-
-```sh
-ssh maui@192.168.2.15
-```
-
-Congratulations! You have at this point succesfully established root access on a completely new and free basic system on your Nexus 5! 
