@@ -19,7 +19,7 @@ Install Android tools.
 On Ubuntu do:
 
 ```sh
-sudo apt-get install android-tools
+sudo apt-get install android-tools*
 ```
 
 Connect the device and type:
