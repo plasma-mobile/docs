@@ -1,7 +1,7 @@
 planning
 ========
 
-this readme is superseeded by etherpad planning doc:
+current etherpad planning doc:
 
 http://54.93.165.48:9001/p/plasma-phone
 
