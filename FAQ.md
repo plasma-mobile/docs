@@ -18,6 +18,10 @@ connect-n5.sh (which is automatically called upon plugging in the phone) then do
 sudo ifconfig usb0 up
 sudo ifconfig usb0 192.168.2.20
 ```
+Now Reload uev's rules to make these changes effective:
+```
+sudo udevadm control --reload-rules
+```
 You can test this by plugging in the phone and check on the host system if usb0 shows up in ifconfig.
 
 Now you should be able to ssh to your phone, using 'ssh 192.168.2.15'.

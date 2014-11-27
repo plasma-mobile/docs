@@ -47,7 +47,6 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee1", SYMLINK+="and
 
 ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="d001" RUN+="/home/sebas/bin/connect-n5.sh"
 ```
-
 replace vendor and product identifiers with yours.
 
 The last line is only needed for systems without networkmanager. It creates the usb0 network interface for you.
