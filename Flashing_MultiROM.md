@@ -58,20 +58,8 @@ Create /etc/udev/rules.d/51-android.rules with:
 SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0666"
 SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee1", SYMLINK+="android_adb"
 SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee1", SYMLINK+="android_fastboot"
-ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="d001" RUN+="/home/sebas/bin/connect-n5.sh"
 ```
-
 replace vendor and product identifiers with yours.
-
-The last line is only needed for systems without networkmanager. It creates the usb0 network interface for you.
-
-connect-n5.sh (which is automatically called upon plugging in the phone) then does the ip setup:
-```
-#!/bin/sh
-sudo ifconfig usb0 up
-sudo ifconfig usb0 192.168.2.20
-```
-You can test this by plugging in the phone and check on the host system if usb0 shows up in ifconfig.
 
 Now Reload uev's rules to make these changes effective:
 ```
