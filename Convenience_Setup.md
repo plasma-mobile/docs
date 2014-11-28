@@ -51,8 +51,8 @@ scp ~/.ssh/id_rsa.pub n5:/tmp
 On the device:
 ```bash
 mkdir ~/.ssh
-cat /tmp/rd_rsa.pub >> ~/.ssh/authorized_keys
-chmod -R 700 ~/.sshme/
+cat /tmp/id_rsa.pub >> ~/.ssh/authorized_keys
+chmod -R 700 ~/.ssh/
 ```
 Now you should be able to ssh into the device just issueing "ssh n5", no password asked. This can be very handy for copying packages, files or anything onto the device.
 
