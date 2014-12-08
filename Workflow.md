@@ -3,7 +3,8 @@
 This document describes some workflows central to Plasma Phone development.
 
 * Accessing packages through OBS
-* Setting up the SDK to build packages locally
+* Setting up the SDK to...
+* Build packages locally
 * Hacking-Testing workflow (TODO)
 * Building new images (TODO)
 * Branching and updating packages (TODO)
@@ -51,6 +52,8 @@ Once you have a Mer account, try the following:
 sdk # to enter the SDK environment
 cd ~/Mer
 osc -A https://api.merproject.org ls home:plfiorini:phone
+# Install ccache to speed up consecutive builds
+zypper in ccache
 ```
 
 Now, check out the Phone repository:
@@ -64,11 +67,31 @@ Now you should find a subdirectory home:plfiorini:phone in your ~/Mer directory,
 
 Note: The "osc" tool is actually a wrapper around the svn command. It works similarly to it, and many things you may have learned from subversion apply here as well.
 
-## Project Status
+## Building packages locally
+
+The osc build command allows you to generate a package locally.
+
+```
+osc build home_plfiorini_maui_devel_armv7hl_latest_armv7hl  armv8el
+```
+
+The platform and arch arguments can be found using
+```
+osc repos
+```
+Pick the armv8el arch for packages you want to install on the phone.
+
+## Build Status
 
 If you want to check the build status of a package:
 https://build.merproject.org/project/show/home:plfiorini:phone
 
+That's the Monitor tab of the OBS project's webpage. You can also use osc to quickly check a build log:
+```
+osb bl home_plfiorini_maui_devel_armv7hl_latest_armv7hl  armv8el
+
+```
+If you want to follow a remote build, use "osc blt", which "tails" the log into your console.
 
 ## Setting up OBS access using osc
 
