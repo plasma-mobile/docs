@@ -27,7 +27,16 @@ https://wiki.merproject.org/wiki/Platform_SDK
 
 In very short (but really, read the guide!):
 ```
-
+export MER_ROOT=/srv/mer
+cd $HOME; curl -k -O https://img.merproject.org/images/mer-sdk/mer-i486-latest-sdk-rolling-chroot-armv7hl-sb2.tar.bz2 ;
+sudo mkdir -p $MER_ROOT/sdks/sdk ;
+cd $MER_ROOT/sdks/sdk ;
+sudo tar --numeric-owner -p -xjf $HOME/mer-i486-latest-sdk-rolling-chroot-armv7hl-sb2.tar.bz2 ;
+echo "export MER_ROOT=$MER_ROOT" >> ~/.bashrc
+echo 'alias sdk=$MER_ROOT/sdks/sdk/mer-sdk-chroot' >> ~/.bashrc ; exec bash ;
+echo 'PS1="MerSDK $PS1"' >> ~/.mersdk.profile ;
+cd $HOME
+sdk
 ```
 
 With that out of the way, we can start grabbing the package sources.
