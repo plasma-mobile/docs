@@ -9,11 +9,11 @@ https://wiki.merproject.org/wiki/Platform_SDK
 ## Setting up OBS access using osc
 
 ### Installing tools
+
+On Debian, the following packages will pull in what's needed:
+```
 apt-get install osc spectacle obs-build
-
-
-* Install the openbuild service client, on Debian. The package is usually called "osc".
-* Add an alias
+```
 
 On Ubuntu, this failed for me, since obs-build seems to not be in the repositories anymore. The package from Debian unstable works for me, though:
 
@@ -24,6 +24,8 @@ sudo dpkg -i obs-build_20141024-1_all.deb
 ```
 
 (Possibly run sudo apt-get install -f to install packages that may still be missing at this point.)
+
+### Fixing the tools
 obs-build installs a script called obs-build, but osc expects a script called "build". Symlinking this in your PATH will help:
 ```
 cd /home/sebas/bin
@@ -53,4 +55,8 @@ This will ask for your username and password. The -A parameter only needs to be 
 
 Now you should find a subdirectory home:plfiorini:phone in your ~/Mer directory, containing a bunch of packages with familiar-looking names.
 
+Note: The "osc" tool is actually a wrapper around the svn command. It works similarly to it, and many things you may have learned from subversion apply here as well.
 
+## Project Status
+
+https://build.merproject.org/project/show/home:plfiorini:phone
