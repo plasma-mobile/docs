@@ -1,5 +1,13 @@
 # General Workflows
 
+This document describes some workflows central to Plasma Phone development.
+
+## Tools
+
+* osc is the open build service command line client, it allows to fetch and upload new packages to OBS
+* spectacle is a tool to convert yaml package descriptions to spec files
+* The Mer SDK is needed to build packages locally. This allows to test changes locally on the device by creating a package on your machine, then uploading it to and installing it on the phone
+
 ## Setting up the SDK
 
 Follow the guide at
@@ -8,12 +16,15 @@ https://wiki.merproject.org/wiki/Platform_SDK
 
 ## Setting up OBS access using osc
 
+Generic instruction for Mer can be found here <https://wiki.merproject.org/wiki/Osc_Setup>
+
 ### Installing tools
 
 On Debian, the following packages will pull in what's needed:
 ```
 apt-get install osc spectacle obs-build
 ```
+
 
 On Ubuntu, this failed for me, since obs-build seems to not be in the repositories anymore. The package from Debian unstable works for me, though:
 
@@ -59,4 +70,5 @@ Note: The "osc" tool is actually a wrapper around the svn command. It works simi
 
 ## Project Status
 
+If you want to check the build status of a package:
 https://build.merproject.org/project/show/home:plfiorini:phone
