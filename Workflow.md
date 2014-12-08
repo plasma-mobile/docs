@@ -14,6 +14,7 @@ This document describes some workflows central to Plasma Phone development.
 * osc is the open build service command line client, it allows to fetch and upload new packages to OBS
 * spectacle is a tool to convert yaml package descriptions to spec files
 * The Mer SDK is needed to build packages locally. This allows to test changes locally on the device by creating a package on your machine, then uploading it to and installing it on the phone
+* zypper is the tool used for package management, packages in Mer are in RPM format.
 
 To make the following steps a lot more convenient, I suggest to follow <https://github.com/plasma-mobile/docs/blob/master/Convenience_Setup.md> first.
 
@@ -21,13 +22,11 @@ To make the following steps a lot more convenient, I suggest to follow <https://
 
 The Mer SDK is basically a chroot environment that you can install on your local system. It has package repos, tools and everything you'll need set up already. To make data sharing between the SDK chroot and your local system easy, it has your home directory mounted inside the SDK, so be careful!
 
-
-Follow the guide at
-https://wiki.merproject.org/wiki/Platform_SDK
+Follow the guide at <https://wiki.merproject.org/wiki/Platform_SDK>
 
 In very short (but really, read the guide!):
 ```
-export MER_ROOT=/srv/mer
+export MER_ROOT=$HOME/Mer
 cd $HOME; curl -k -O https://img.merproject.org/images/mer-sdk/mer-i486-latest-sdk-rolling-chroot-armv7hl-sb2.tar.bz2 ;
 sudo mkdir -p $MER_ROOT/sdks/sdk ;
 cd $MER_ROOT/sdks/sdk ;
@@ -49,11 +48,12 @@ Also, you'll need an account at merproject.org. Get one via https://bugs.merproj
 
 Once you have a Mer account, try the following:
 ```
+sdk # to enter the SDK environment
+cd ~/Mer
 osc -A https://api.merproject.org ls home:plfiorini:phone
 ```
 
 Now, check out the Phone repository:
-
 ```
 cd ~/Mer
 osc co home:plfiorini:phone
