@@ -79,7 +79,7 @@ The platform and arch arguments can be found using
 ```
 osc repos
 ```
-Pick the armv8el arch for packages you want to install on the phone.
+Pick the "armv8el" arch for packages you want to install on the phone.
 
 ## Build Status
 
@@ -105,7 +105,6 @@ On Debian, the following packages will pull in what's needed:
 ```
 apt-get install osc spectacle obs-build
 ```
-
 
 On Ubuntu, this failed for me, since obs-build seems to not be in the repositories anymore in 14.10. The package from Debian unstable works for me, though:
 
