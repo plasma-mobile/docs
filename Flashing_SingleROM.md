@@ -129,7 +129,8 @@ Once installed, the TWRP main menu screen will appear.
 
 Download the following files:
 
-* CyanogenMod 11 M9: http://download.cyanogenmod.org/get/jenkins/78753/cm-11-20140805-SNAPSHOT-M9-hammerhead.zip
+* CyanogenMod 11 M9: http://build.maui-project.org/phone/cm-11-20140805-SNAPSHOT-M9-hammerhead.zip
+* Original Source: http://download.cyanogenmod.org/?device=hammerhead&type=snapshot
 * Plasma Phone Milestone 1 image (only access via ssh): http://build.maui-project.org/phone/maui-lge-hammerhead-0.1.0.zip
 
 
