@@ -9,16 +9,7 @@ Status:
 
 ## How to run
 
-Log in via ssh as usual.
-
-Become root and run droid-hal-init:
-
-```sh
-sudo su -
-/bin/sh /usr/bin/droid/droid-hal-startup.sh
-```
-
-Now open another ssh session.
+Log in as user "maui" via ssh as usual.
 
 Create ~/run-comp:
 
