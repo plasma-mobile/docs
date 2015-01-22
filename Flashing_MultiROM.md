@@ -76,13 +76,13 @@ sudo adb devices
 
 your device will be listed.
 
+## Install MultiROM Manager
+
+Go to the store, install MultiROM Manager.
+
 ## Root device
 
-Reboot to bootloader:
-
-```sh
-sudo adb reboot booloader
-```
+Power off the phone and reboot pressing volume down and power together.
 
 Then unlock the bootloader:
 
@@ -92,11 +92,13 @@ sudo fastboot oem unlock
 
 Select "Yes" on the phone using volume keys, confirm pressing the power key once.
 
-Now reboot:
+Reboot when the previous command returns to the prompt:
 
-```
+```sh
 sudo fastboot reboot
 ```
+
+Power off the phone and reboot pressing volume down and power together.
 
 Download [CF-Auto_root](http://download.chainfire.eu/363/CF-Root/CF-Auto-Root/CF-Auto-Root-hammerhead-hammerhead-nexus5.zip)
 on your PC then:
@@ -109,9 +111,9 @@ sudo fastboot boot CF-Auto-Root-hammerhead-hammerhead-nexus5.img
 
 This will take a few minutes and reboot on its own.
 
-## Install MultiROM Manager
+## Setup MultiROM Manager
 
-Go to the store, install MultiROM Manager and run it.
+Run MultiROM Manager.
 
 Grant permission when asked.
 
