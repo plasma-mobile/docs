@@ -1,0 +1,327 @@
+#!/usr/bin/env python
+"""
+# TODO
+Fix:
+Problem: qt5-feedback-haptics-droid-vibrator-0.0.2-1.1.10.maui.armv7hl requires libQt0Feedback.so.0, but this requirement cannot be provided
+= > fix dependency in that package to Qt1Feedback, or so.
+"""
+import os
+import sys 
+
+
+SRC = "/home/sebas/kf5/src/packaging/"
+TAG = "v5.2.0"
+TMP = SRC + "tmp/"
+PROJECT_BASEDIR = "/home/sebas/Mer/"
+#PROJECT = "/home/sebas/Mer/home:sebas:branches:home:plfiorini:maui:devel:frameworks/"
+PROJECT = "home:plfiorini:maui:devel:frameworks"
+MD = "/home/sebas/Mer/home:plfiorini:maui:devel:frameworks/"
+
+VERSION = "5.6.0"
+PLASMA_VERSION = "5.2.0"
+OLDVERSION = "5.1.90"
+
+QT_OLDVERSION="5.3.2"
+QT_VERSION="5.4.1"
+
+package_versions = {}
+package_sources = {}
+package_projects = {}
+
+
+
+qt = (
+    "qtbase",
+    "qtdeclarative",
+    "qtfeedback",
+    "qtgraphicaleffects",
+    "qt5-qtpim",
+    "qtchooser",
+    "qtimageformats",
+    "qtlocation",
+    "qtmultimedia",
+    "qtpim",
+    "qtquickcontrols",
+    "qtscript",
+    "qtsensors",
+    "qtwebengine",
+    "qtwebkit",
+    "qt3d",
+    "qtx11extras",
+    "qtsvg",
+    "qtxmlpatterns",
+    )
+
+tier1 = (
+    "attica",
+    "extra-cmake-modules",
+    "kapidox",
+    "karchive",
+    "kcodecs",
+    "kconfig",
+    "kcoreaddons",
+    "kdbusaddons",
+    "kdnssd",
+    "kglobalaccel",
+    "kguiaddons",
+    "ki18n",
+    "kidletime",
+    "kimageformats",
+    "kitemmodels",
+    "kitemviews",
+    "kplotting",
+    "kwidgetsaddons",
+    "kwindowsystem",
+    "solid",
+    "sonnet",
+    "threadweaver")
+
+tier2 = (
+    "kauth",
+    "kcompletion",
+    "kcrash",
+    "kdoctools",
+    "kjobwidgets",
+    "kpty",
+    "kunitconversion",
+    "kpackage" )
+
+tier3 = (
+    "kactivities",
+    "kbookmarks",
+    "kcmutils",
+    "kconfigwidgets",
+    "kdeclarative",
+    "kded",
+    "kdesignerplugin",
+    "kdesu",
+    "kdewebkit",
+    "kemoticons",
+    "kiconthemes",
+    "kinit",
+    "kio",
+    "knewstuff",
+    "knotifications",
+    "knotifyconfig",
+    "kparts",
+    "krunner",
+    "kservice",
+    "ktexteditor",
+    "ktextwidgets",
+    "kwallet",
+    "kxmlgui",
+    "plasma",
+    "frameworkintegration",
+    "kdelibs4support",
+    "khtml",
+    "kjs",
+    "kjsembed",
+    "kmediaplayer",
+    "kross",
+    )
+
+extras = (
+    "konsole",
+    "kwrited",
+    "libmm-qt",
+    "libnm-qt",
+    #"phonon-qt5",
+    #"phonon-qt5-gstreamer",
+    )
+
+plasma = (
+    "kfilemetadata",
+    "baloo",
+    "baloo-widgets",
+    "breeze",
+    "kde-cli-tools",
+    #"kf5-filesystem",
+    "kio-extras",
+    "khelpcenter",
+    "khotkeys",
+    "kinfocenter",
+    "plasma-desktop",
+    "plasma-nm",
+    "plasma-workspace",
+    #"polkit-kde-agent-1",
+    "polkit-qt5-1",
+    "powerdevil",
+    "systemsettings",
+    "libkscreen",
+    "kscreen",
+    "ksysguard",
+    "kwalletmanager",
+    "kwayland",
+    "kwin",
+    "libksysguard",
+    "milou",
+    "oxygen",
+    #"oxygen-fonts",
+    #"oxygen-icon-theme",
+    "kdecoration",
+    )
+
+phone = (
+    "plasma-mobile",
+    "plasma-phone-bootsplash",
+    "plasma-phone-browser",
+    "plasma-phone-components",
+    "plasma-phone-settings",
+    #"plasma-workspace",
+    )
+
+
+# Fill versions hash, first define versions for package sets,
+# then add overrides for specific packages
+
+for pl in plasma:
+    package_versions[pl] = PLASMA_VERSION
+
+for qp in qt:
+    package_versions[qp] = QT_VERSION
+
+package_versions.update({
+    "baloo" : "5.6.0",
+    "baloo-widgets" : "5.6.0",
+    "kfilemetadata" : "5.6.0",
+    "extra-cmake-modules" : "1.6.0",
+    "kde-baseapps" : "4.97.0",
+    "kate" : "5.0.0+git1",
+    "phonon-qt5" : "4.8.50",
+    "phonon-qt5-gstreamer" : "4.8.50",
+    "polkit-qt5-1" : "0.112.0",
+    "libnm-qt" : VERSION,
+    "libmm-qt" : PLASMA_VERSION,
+    "greenisland" : "0.5.90+git1",
+    "qtwayland-wayland_egl" : "5.3.92+git0",
+    "plasma-mobile" : PLASMA_VERSION,
+    "qtwayland-wayland_egl" : "5.3.92+git0",
+    "qt5-qpa-hwcomposer-plugin" : "5.4.1",
+    "plasma-phone-components" : "0.2.3",
+    })
+
+
+# Do the same for sources
+
+for pl in qt:
+    package_sources[pl] = SRC + "qt5/"
+
+package_sources.update({
+    "plasma-phone-settings" : SRC + "../phone/",
+    "plasma-phone-components" : SRC + "../phone/",
+    "plasma-phone-browser" : SRC + "../phone/",
+    "plasma-phone-bootsplash" : SRC + "../phone/",
+    "plasma-mobile" : SRC + "../",
+    "kde-baseapps" : SRC + "../kde/applications/",
+    "qt5-qpa-hwcomposer-plugin" : "/home/sebas/Mer/home:plfiorini:maui:devel:hw:lge:hammerhead/qt5-qpa-hwcomposer-plugin/",
+    })
+
+# Same for project, define static ones, then fill from sets
+
+for pl in phone:
+    package_projects[pl] = "home:plfiorini:phone"
+
+package_projects.update({
+    "greenisland" : "home:plfiorini:maui:devel:hawaii",
+    "qtbase" : "home:plfiorini:maui:devel:hw:lge:hammerhead",
+})
+
+class Package:
+    package = "joey"
+
+    def __init__(self, package):
+        self.package = package
+        #print("new Package " + self.package + " " + self.version())
+        #print("    project: " + self.project())
+        #print("    source: " + self.source())
+        #print("    version: " + self.version())
+
+    def version(self):
+        v = VERSION
+        if package in package_versions:
+            v = package_versions[package]
+        #print("version: " + package + "-"+ v)
+        return v
+
+    def project(self):
+        v = PROJECT
+        if self.package in package_projects:
+            v = package_projects[self.package]
+        o = PROJECT_BASEDIR + v + "/"
+        #print("Project: " + package + " :: "+ o)
+        return o
+
+    def source(self):
+        v = SRC
+        if self.package in package_sources:
+            v = package_sources[self.package]
+        #print("Source: " + package + "-"+ v)
+        return v
+
+    def tarball(self):
+        TARBALL = self.project() + self.package + "/" + self.package + "-" + self.version() + ".tar.xz"
+        cmd_cd = "cd " + TMP + " && "
+        cmd_rsync = "rsync -ah --delete --exclude .git " + self.source() + self.package + "/ " + TMP + package + "-" + self.version()
+        cmd_tar = "tar cfJ " + TARBALL + " " + self.package + "-" + self.version()
+
+        print(cmd_cd + cmd_rsync)
+        os.system(cmd_rsync)
+        print(cmd_cd + cmd_tar)
+        os.system(cmd_tar)
+        print
+
+    def checkout(self):
+        cmd_cd = "cd " + self.source() + self.package
+        cmd_checkout = "git checkout master && git pull && git checkout " + TAG
+        print(cmd_cd)
+        print(cmd_checkout)
+        os.system(cmd_cd + " && " + cmd_checkout)
+
+    def specify(self):
+        print("Run from inside SDK!")
+        cmd_cd = "cd " + self.project() + self.package + " && "
+        cmd_spec = cmd_cd + "specify"
+        print(cmd_spec)
+        os.system(cmd_spec)
+
+    def oscCommit(self, message):
+        cmd_cd = "cd " + self.project() + self.package + " && "
+        #cmd_rm = cmd_cd + "osc rm " + self.package + "-" + OLDVERSION + ".tar.xz"
+        #cmd_add = cmd_cd + "osc add " + self.package + "-" + self.version() + ".tar.xz"
+        cmd_ci = cmd_cd + "osc commit -m \"" + message + "\" "
+        #print(cmd_rm)
+        print(cmd_ci)
+        os.system(cmd_ci)
+        print("\n")
+        #os.system(cmd_add)
+
+    def updateYaml(self):
+        cmd_perl = "perl -p -i -e 's/5\.1\.90/" + self.version() + "/g' " + self.project() + self.package + "/" + self.package + ".yaml"
+        print(cmd_perl)
+        os.system(cmd_perl)
+
+def specify(package):
+    cmd_specify = "cd " + project(package) + package + " && specify"
+    print(cmd_specify)
+    #os.system(cmd_specify)
+
+
+for package in plasma:
+    continue
+    p = Package(package)
+    #p.updateYaml()
+    #p.specify()
+    p.oscCommit("Update to Plasma 5.2.0")
+    #continue
+    b = raw_input("Enter to continue, q to quit.")
+    if (b == "q"):
+        print("Quitting")
+        sys.exit()
+
+
+if sys.argv.__len__() > 1:
+    package = sys.argv[1]
+    p = Package(package)
+    print("Package for " + package + " : " + p.version())
+    p.tarball()
+    #p.checkout()
