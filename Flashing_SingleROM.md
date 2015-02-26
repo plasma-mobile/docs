@@ -131,7 +131,7 @@ Download the following files:
 
 * CyanogenMod 11 M9: http://build.maui-project.org/phone/cm-11-20140805-SNAPSHOT-M9-hammerhead.zip
 * Original Source: http://download.cyanogenmod.org/?device=hammerhead&type=snapshot
-* Plasma Phone Milestone 1 image (only access via ssh): http://build.maui-project.org/phone/maui-lge-hammerhead-0.1.0.zip
+* Plasma Phone Milestone 1 image (only access via ssh): http://dev.plasma-mobile.org/phone/maui-lge-hammerhead-0.2.1.zip
 
 
 ## Flash images
@@ -154,7 +154,7 @@ sudo adb push cm-11-20140805-SNAPSHOT-M9-hammerhead.zip /sdcard/
 Upload Plasma Phone running this from the Linux host (again wait to finish):
 
 ```sh
-sudo adb push maui-lge-hammerhead-0.1.0.zip /sdcard/
+sudo adb push maui-lge-hammerhead-0.2.1.zip /sdcard/
 ```
 
 From the TWRP main menu:
@@ -162,7 +162,7 @@ From the TWRP main menu:
 * Tap "Install"
 * Select cm-11-20140805-SNAPSHOT-M9-hammerhead.zip from /sdcard
 * Tap "Add More Zips"
-* Select maui-lge-hammerhead-0.1.0.zip from /sdcard
+* Select maui-lge-hammerhead-0.2.1.zip from /sdcard
 * Swipe to confirm flash (this can take a while, watch the messages for errors)
 * Tap "Reboot system"
 
@@ -187,7 +187,7 @@ Congratulations! You have at this point succesfully established root access on a
 
 Download:
 
-* Plasma Phone Milestone 2 image (graphical shell): http://build.maui-project.org/phone/maui-lge-hammerhead-0.2.0.zip
+* Plasma Phone Milestone 2 image (graphical shell): http://dev.plasma-mobile.org/phone/maui-lge-hammerhead-0.2.1.zip
 
 
 From the TWRP main menu:
@@ -201,7 +201,7 @@ sudo adb push cm-11-20140805-SNAPSHOT-M9-hammerhead.zip /sdcard/
 Upload Plasma Phone running this from the Linux host (again wait to finish):
 
 ```sh
-sudo adb push maui-lge-hammerhead-0.2.0.zip /sdcard/
+sudo adb push maui-lge-hammerhead-0.2.1.zip /sdcard/
 ```
 
 From the TWRP main menu:
@@ -209,7 +209,7 @@ From the TWRP main menu:
 * Tap "Install"
 * Select cm-11-20140805-SNAPSHOT-M9-hammerhead.zip from /sdcard
 * Tap "Add More Zips"
-* Select maui-lge-hammerhead-0.2.0.zip from /sdcard
+* Select maui-lge-hammerhead-0.2.1.zip from /sdcard
 * Swipe to confirm flash (this can take a while, watch the messages for errors)
 * Tap "Reboot system"
 
