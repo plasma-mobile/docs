@@ -126,7 +126,7 @@ Reboot when asked.
 Download the following files:
 
 * CyanogenMod 11 M9: http://download.cyanogenmod.org/get/jenkins/78753/cm-11-20140805-SNAPSHOT-M9-hammerhead.zip
-* Latest Plasma Phone image: http://build.maui-project.org/phone/maui-armv7hl-lge-hammerhead-milestone1/maui-lge-hammerhead-0.6.0.zip
+* Latest Plasma Phone image: http://dev.plasma-mobile.org/phone/maui-lge-hammerhead-0.2.1.zip
 
 ## Flash images
 
@@ -160,11 +160,11 @@ Go into the multirom interface:
 * Tap "Cyanogenmod Zip file"
 * Select cm-11-20140805-SNAPSHOT-M9-hammerhead.zip from /sdcard
 * Tap "Rootfs ZIP file"
-* Select maui-lge-hammerhead-0.6.0.zip from /sdcard
+* Select maui-lge-hammerhead-0.2.1.zip from /sdcard
 * Tap "Install"
 * Swipe to confirm
 * Tap "Reboot system"
-* From the ROM selector pick "maui-lge-hammerhead-0.6.0"
+* From the ROM selector pick "maui-lge-hammerhead-0.2.1"
 
 ## Connect to the device via SSH
 
