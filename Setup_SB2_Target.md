@@ -2,7 +2,7 @@ Setting up scratchbox2 target
 =============================
 
 Maui prepares sb2 target for armv7hl using maui-kickstarter-configs and the tarball is
-published on http://build.maui-project.org.
+published on http://dev.plasma-mobile.org/
 
 Here is a Maui revised version of the instructions in page 17 from HADK:
 
@@ -14,7 +14,7 @@ hadk
 cd $HOME
 
 SFFE_SB2_TARGET=/parentroot/$MER_ROOT/targets/$VENDOR-$DEVICE-armv7hl
-TARBALL=http://build.maui-project.org/nightly/20141017/maui-sdk-target-armv7hl/maui-sdk-target-armv7hl.tar.bz2
+TARBALL=http://dev.plasma-mobile.org/nightly/20141017/maui-sdk-target-armv7hl/maui-sdk-target-armv7hl.tar.bz2
 curl -O $TARBALL
 
 sudo mkdir -p $SFFE_SB2_TARGET
