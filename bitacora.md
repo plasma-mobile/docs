@@ -191,4 +191,15 @@ Weston runs directly against libhybris. We used Weston from Ubuntu's repository.
 
 XDG_RUNTIME_DIR=/run/user/0/ weston --backend=fbdev-backend.so --tty=1 --device=/dev/fb0
 
-Returns:
+
+Going through logind helps set up weston.
+
+Use git://anongit.kde.org/scratch/davidedmundson/simplelogin
+
+this starts weston, and according to all logs and output weston is running and working perfectly.
+
+..but nothing apears on the screen
+
+seting --device, and playing with different ttys doesn't help. fgconsole shows we're entering the right one
+
+entering garbage into fb0 (cat /dev/urandom > /dev/fb0) isn't affecting the output either.
