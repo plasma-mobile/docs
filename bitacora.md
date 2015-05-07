@@ -192,6 +192,7 @@ Weston runs directly against libhybris. We used Weston from Ubuntu's repository.
 XDG_RUNTIME_DIR=/run/user/0/ weston --backend=fbdev-backend.so --tty=1 --device=/dev/fb0
 
 
+============================
 Going through logind helps set up weston.
 
 Use git://anongit.kde.org/scratch/davidedmundson/simplelogin
@@ -203,3 +204,15 @@ this starts weston, and according to all logs and output weston is running and w
 seting --device, and playing with different ttys doesn't help. fgconsole shows we're entering the right one
 
 entering garbage into fb0 (cat /dev/urandom > /dev/fb0) isn't affecting the output either.
+
+
+============================
+(notes from Dave 7/5/15)
+
+
+a lot of the old attempts were specifying an XDG_RUNTIME_DIR, I thought I'd try shoving the qml-compositor with hwcomposer code through my logind code to see if that made a difference. It did not.. (interstingly that page says is crashes, mine just does nothing.
+
+I also found (by accident) a report from some guy that was running
+qmlcompositor against hwcomposer, then nesting weston inside that as a nested wayland. /if/ it had worked it'd be an alternate way to run kwin without a hwcomposer backend. It did not work.
+
+==
