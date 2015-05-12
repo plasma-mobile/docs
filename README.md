@@ -1,4 +1,4 @@
-docs Overview
+Overview of 'docs'
 ========
 
 progress development log:
