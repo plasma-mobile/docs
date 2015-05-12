@@ -34,7 +34,7 @@ an output like this will come out:
 Bus 004 Device 010: ID 18d1:4ee1 Google Inc. Nexus 4 / 10
 ```
 
-18d1 is the vendor id, 4ee1 is the produce id.
+18d1 is the vendor id, 4ee1 is the product id.
 
 Numbers may change with other devices.
 
