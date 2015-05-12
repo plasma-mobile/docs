@@ -1,5 +1,10 @@
 # Frequently Asked Questions & Common Pitfalls
 
+## What is the default user and password of the development image?
+
+
+
+
 ## I can't connect to the phone using SSH
 
 If you're not using network-manager on the host system, the network might not be set up as needed. You can do the following to have that happen automatically:
