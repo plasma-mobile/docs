@@ -1,13 +1,13 @@
 Overview of 'docs'
 ========
 
-progress development log:
+Development Log:
 
 https://github.com/plasma-mobile/docs/blob/master/bitacora.md
 
 
-
-current etherpad planning doc:
+========
+etherpad planning doc:
 
 http://54.93.165.48:9001/p/plasma-phone
 
