@@ -1,11 +1,11 @@
 Development Log
 -------------------
 
-newest entries should appear on top
+newest entries (mm/dd/yyyy) should appear on top
 
 
 ============================
-(notes from Dave 7/5/15)
+(notes from Dave 5/7/2015)
 
 
 a lot of the old attempts were specifying an XDG_RUNTIME_DIR, I thought I'd try shoving the qml-compositor with hwcomposer code through my logind code to see if that made a difference. It did not.. (interstingly that page says is crashes, mine just does nothing.
@@ -17,8 +17,9 @@ qmlcompositor against hwcomposer, then nesting weston inside that as a nested wa
 
 
 ============================
+(notes from Boud 4/29/2015)
 
-29.04.2015:
+
 Short summary:
 
 * greenisland always crashes when compiling shaders
