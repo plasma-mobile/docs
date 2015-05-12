@@ -1,5 +1,11 @@
-planning
+docs Overview
 ========
+
+progress development log:
+
+https://github.com/plasma-mobile/docs/blob/master/bitacora.md
+
+
 
 current etherpad planning doc:
 
