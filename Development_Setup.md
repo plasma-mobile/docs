@@ -25,9 +25,33 @@ Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by fla
 
     * remove a bunch of existing packages to make space. See the end of this document for my list.
     
+    * Add our own repo:
     
+        sudo apt-add-repository ppa:plasma-phone/ppa 
+        sudo apt-get update
+        
+        sudo apt-get install libepoxy kwayland kdecoration kwin simplelogin plasma-phone-components
+        
+    * Start plasma
+    
+    unset EGL_PLATFORM                                                                                     
+    unset QT_QPA_PLATFORM                                                                                  
+    unset QT_QPA_EGLFS_DEPTH                                                                               
+    unset QT_QPA_EGLFS_HIDECURSOR                                                                          
+    unset QT_COMPOSITOR_NEGATE_INVERTED_Y
 
+    export QT_QPA_PLATFORM=wayland
+    export QT_QPA_PLATFORMTHEME=KDE
+    export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+    export XDG_CURRENT_DESKTOP=KDE
+    export KSCREEN_BACKEND=QScreen
 
+    export KDE_FULL_SESSION=1
+    export KDE_SESSION_VERSION=5
+
+    export $(dbus-launch)
+    exec /usr/bin/plasmashell -p org.kde.satellite.phone
+        
 ## Building apps locally
 
 
