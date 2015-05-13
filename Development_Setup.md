@@ -30,7 +30,7 @@ Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by fla
         sudo apt-add-repository ppa:plasma-phone/ppa 
         sudo apt-get update
         
-        sudo apt-get install libepoxy0 libkdecorations2-5 xwayland qtwayland5 libkf5waylandclient5 libkf5waylandserver5 kwin simplelogin plasma-phone-components
+        sudo apt-get install libepoxy0 libkdecorations2-5 xwayland qtwayland5 libkf5waylandclient5 libkf5waylandserver5 kwin simplelogin plasma-phone-components qml-module-org-kde*
         
     * Start plasma
     
