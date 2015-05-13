@@ -23,8 +23,20 @@ Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by fla
         sudo setprop persist.service.ssh true
         sudo reboot
 
-    * remove a bunch of existing packages to make space:
-        rc  account-plugin-facebook                              0.12+15.04.20150417-0ubuntu1                all          GNOME Control Center account plugin for single signon - facebook
+    * remove a bunch of existing packages to make space. See the end of this document for my list.
+    
+    
+
+
+## Building apps locally
+
+
+## Installation and Device-Deployment
+
+
+## Removed packages from a default vivid proposed ubuntu-touch image:
+
+    rc  account-plugin-facebook                              0.12+15.04.20150417-0ubuntu1                all          GNOME Control Center account plugin for single signon - facebook
     rc  account-plugin-flickr                                0.12+15.04.20150417-0ubuntu1                all          GNOME Control Center account plugin for single signon - flickr
     rc  account-plugin-google                                0.12+15.04.20150417-0ubuntu1                all          GNOME Control Center account plugin for single signon
     rc  account-plugin-twitter                               0.12+15.04.20150417-0ubuntu1                all          GNOME Control Center account plugin for single signon - twitter
@@ -164,11 +176,3 @@ Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by fla
     rc  unity-system-compositor                              0.0.5+15.04.20150430-0ubuntu1               armhf        System compositor for Ubuntu
     rc  unity8                                               8.02+15.04.20150423-0ubuntu1                armhf        Unity 8 shell
     rc  url-dispatcher:armhf                                 0.1+15.04.20150123-0ubuntu1                 armhf        service to allow sending of URLs and get handlers started
-
-
-
-## Building apps locally
-
-
-## Installation and Device-Deployment
-
