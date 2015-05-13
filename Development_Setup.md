@@ -57,6 +57,10 @@ Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by fla
 
 ## Installation and Device-Deployment
 
+## Building on the arm server
+
+IP Address: 212.47.241.146
+Put all data in /mnt/data, not in /
 
 ## Removed packages from a default vivid proposed ubuntu-touch image:
 
