@@ -38,31 +38,31 @@ Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by fla
         
 You need to edit ~/.config/plasma-org.kde.satellite.phone-appletsrc to contain:
 
-[Containments][1]
-activityId=//leave the existing value unchanged
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.phone.homescreen
-wallpaperplugin=org.kde.image
+   [Containments][1]
+   activityId=//leave the existing value unchanged
+   formfactor=0
+   immutability=1
+   lastScreen=0
+   location=0
+   plugin=org.kde.phone.homescreen
+   wallpaperplugin=org.kde.image
 
-[Containments][1][Applets][3]
-immutability=1
-plugin=org.kde.phone.notifications
+   [Containments][1][Applets][3]
+   immutability=1
+   plugin=org.kde.phone.notifications
 
-[Containments][2]
-activityId=
-formfactor=2
-immutability=1
-lastScreen=0
-location=3
-plugin=org.kde.phone.panel
-wallpaperplugin=org.kde.image
+   [Containments][2]
+   activityId=
+   formfactor=2
+   immutability=1
+   lastScreen=0
+   location=3
+   plugin=org.kde.phone.panel
+   wallpaperplugin=org.kde.image
 
-[Containments][2][Applets][4]
-immutability=1
-plugin=org.kde.phone.quicksettings
+   [Containments][2][Applets][4]
+   immutability=1
+   plugin=org.kde.phone.quicksettings
         
         
 ## Building apps locally
