@@ -34,23 +34,36 @@ Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by fla
         
     * Start plasma
     
-    unset EGL_PLATFORM                                                                                     
-    unset QT_QPA_PLATFORM                                                                                  
-    unset QT_QPA_EGLFS_DEPTH                                                                               
-    unset QT_QPA_EGLFS_HIDECURSOR                                                                          
-    unset QT_COMPOSITOR_NEGATE_INVERTED_Y
+    Plasma-shell now starts automatically on boot! XXX: how to restart it manually?
+        
+You need to edit ~/.config/plasma-org.kde.satellite.phone-appletsrc to contain:
 
-    export QT_QPA_PLATFORM=wayland
-    export QT_QPA_PLATFORMTHEME=KDE
-    export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-    export XDG_CURRENT_DESKTOP=KDE
-    export KSCREEN_BACKEND=QScreen
+[Containments][1]
+activityId=//leave the existing value unchanged
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.phone.homescreen
+wallpaperplugin=org.kde.image
 
-    export KDE_FULL_SESSION=1
-    export KDE_SESSION_VERSION=5
+[Containments][1][Applets][3]
+immutability=1
+plugin=org.kde.phone.notifications
 
-    export $(dbus-launch)
-    exec /usr/bin/plasmashell -p org.kde.satellite.phone
+[Containments][2]
+activityId=
+formfactor=2
+immutability=1
+lastScreen=0
+location=3
+plugin=org.kde.phone.panel
+wallpaperplugin=org.kde.image
+
+[Containments][2][Applets][4]
+immutability=1
+plugin=org.kde.phone.quicksettings
+        
         
 ## Building apps locally
 
