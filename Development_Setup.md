@@ -46,10 +46,11 @@ Plasma-shell now starts automatically on boot! You can kill the shell and the re
          export KDE_SESSION_VERSION=5
 
          export $(dbus-launch)
-         /usr/bin/kbuildsycoca5
-         /usr/bin/kded5&
          exec /usr/bin/plasmashell -p org.kde.satellite.phone
 
+If kded5 has crashed, you may have to start it manually:
+
+         /usr/bin/kded5&
         
 Note: You need to edit ~/.config/plasma-org.kde.satellite.phone-appletsrc to contain:
 
@@ -81,7 +82,6 @@ Note: You need to edit ~/.config/plasma-org.kde.satellite.phone-appletsrc to con
         
         
 ## Building apps locally
-
 
 ## Installation and Device-Deployment
 
