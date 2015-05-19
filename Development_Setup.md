@@ -6,63 +6,78 @@ This document describes a convenient development setup for application developme
 
 Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by flashing directly. After installation and enabling developer mode, enable ssh:
 
-    * To make logging in possible without unlocking first
+### To make logging in possible without unlocking first
 
         sudo touch /userdata/.writable_image
         sudo touch /userdata/.adb_onlock
         sudo reboot
 
-    * edit /etc/init/ssh.override
+### edit /etc/init/ssh.override
     
         manual
         exec /usr/sbin/sshd -D -o PasswordAuthentication=yes
         
-    * To make ssh start persistently. The ssh password is 1234 or whatever you setup for unlocking the phone
+### To make ssh start persistently. The ssh password is 1234 or whatever you setup for unlocking the phone
 
         sudo service ssh start
         sudo setprop persist.service.ssh true
         sudo reboot
 
-    * remove a bunch of existing packages to make space. See the end of this document for my list.
-    
-    * Add our own repo:
+### To install our stuff
+
+First remove a bunch of existing packages to make space. See the end of this document for my list. then add our own repo:
     
         sudo apt-add-repository ppa:plasma-phone/ppa 
         sudo apt-get update
         
         sudo apt-get install libepoxy0 libkdecorations2-5 xwayland qtwayland5 libkf5waylandclient5 libkf5waylandserver5 kwin simplelogin plasma-phone-components qml-module-org-kde*
         
-    * Start plasma
+Then start plasma:
     
-    Plasma-shell now starts automatically on boot! You can kill the shell and the restart from the terminal after making changes.
+Plasma-shell now starts automatically on boot! You can kill the shell and the restart from the terminal after making changes. You need to export a number of environment variables:
+
+         export QT_QPA_PLATFORM=wayland
+         export QT_QPA_PLATFORMTHEME=KDE
+         export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+         export XDG_CURRENT_DESKTOP=KDE
+         export KSCREEN_BACKEND=QScreen
+
+         export KDE_FULL_SESSION=1
+         export KDE_SESSION_VERSION=5
+
+         export $(dbus-launch)
+         /usr/bin/kbuildsycoca5
+         /usr/bin/kded5&
+         exec /usr/bin/plasmashell -p org.kde.satellite.phone
+
         
 Note: You need to edit ~/.config/plasma-org.kde.satellite.phone-appletsrc to contain:
 
-   [Containments][1]
-   activityId=//leave the existing value unchanged
-   formfactor=0
-   immutability=1
-   lastScreen=0
-   location=0
-   plugin=org.kde.phone.homescreen
-   wallpaperplugin=org.kde.image
+         [Containments][1]
+         activityId=//leave the existing value unchanged
+         formfactor=0
+         immutability=1
+         lastScreen=0
+         location=0
+         plugin=org.kde.phone.homescreen
+         wallpaperplugin=org.kde.image
 
-   [Containments][1][Applets][3]
-   immutability=1
-   plugin=org.kde.phone.notifications
+         [Containments][1][Applets][3]
+         immutability=1
+         plugin=org.kde.phone.notifications
 
-   [Containments][2]
-   activityId=
-   formfactor=2
-   immutability=1
-   lastScreen=0
-   location=3
-   plugin=org.kde.phone.panel
-   wallpaperplugin=org.kde.image
+         [Containments][2]
+         activityId=
+         formfactor=2
+         immutability=1
+         lastScreen=0
+         location=3
+         plugin=org.kde.phone.panel
+         wallpaperplugin=org.kde.image
 
-   [Containments][2][Applets][4]
-   immutability=1
-   plugin=org.kde.phone.quicksettings
+         [Containments][2][Applets][4]
+         immutability=1
+         plugin=org.kde.phone.quicksettings
         
         
 ## Building apps locally
