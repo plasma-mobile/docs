@@ -34,9 +34,9 @@ Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by fla
         
     * Start plasma
     
-    Plasma-shell now starts automatically on boot! XXX: how to restart it manually?
+    Plasma-shell now starts automatically on boot! You can kill the shell and the restart from the terminal after making changes.
         
-You need to edit ~/.config/plasma-org.kde.satellite.phone-appletsrc to contain:
+Note: You need to edit ~/.config/plasma-org.kde.satellite.phone-appletsrc to contain:
 
    [Containments][1]
    activityId=//leave the existing value unchanged
