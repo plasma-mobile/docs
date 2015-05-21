@@ -32,6 +32,13 @@ First remove a bunch of existing packages to make space. See the end of this doc
         
         sudo apt-get install libepoxy0 libkdecorations2-5 xwayland qtwayland5 libkf5waylandclient5 libkf5waylandserver5 kwin simplelogin plasma-phone-components qml-module-org-kde*
         
+
+After plasma-phone-settings is installed, get
+
+        wget http://www.notmart.org/misc/dothome.tar.xz
+
+and untar in the home dir when plasmashell and kactivitymanagerd are not running.
+
 Then start plasma:
     
 Plasma-shell now starts automatically on boot! You can kill the shell and the restart from the terminal after making changes. You need to export a number of environment variables:
