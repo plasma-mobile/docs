@@ -136,5 +136,5 @@ System then downloads the hammerhead image from the specified server, pushes the
 
 The device will at some point (ca 5min on my system with fast connection) show the ubuntu logo spinning. This takes another 5 minutes, then it reboots, the google logo shows, and shortly thereafter our spinning ubuntu logo again. After about 1 minute, it's done, and I'm greeted with the welcome screen.
 
-
+Now follow the instructions for your <a href="Development_Setup.md">Development Setup</a> to get going.
 
