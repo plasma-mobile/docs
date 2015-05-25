@@ -3,23 +3,21 @@ How to flash Kubuntu Phone on Nexus 5
 
 Useful information can be found here:
 
-* https://wiki.merproject.org/wiki/Building_Sailfish_OS_for_Nexus_5
-* https://wiki.merproject.org/wiki/Adaptations/libhybris/Install_SailfishOS_for_hammerhead
-* http://releases.sailfishos.org/sfa-ea/2014-07-21_SailfishOSHardwareAdaptationDevelopmentKit.pdf
+* https://wiki.ubuntu.com/Touch/Devices#Server_at_http:.2BAC8ALw-system-image.tasemnice.eu
 * http://schier.co/post/how-to-root-nexus-5-in-ubuntu-linux
 
 ## Prerequisites
 
 The device must be connected to the Linux host with the USB cable all the time, unless told to reconnect.
 
-## Configure Linux
+## Configure the host device
 
 Install Android tools.
 
 On Ubuntu do:
 
 ```sh
-sudo apt-get install android-tools*
+sudo apt-get install android-tools* ubuntu-device-flash phablet-tools
 ```
 
 Connect the device and type:
@@ -125,92 +123,18 @@ Once installed, the TWRP main menu screen will appear.
 * If asked to "Install SuperSU", swipe to confirm and root the device
 
 
-## Download images
+## Flash the device
 
-Download the following files:
+Then connect the device to the host system via USB and boot into bootloader using volume up and the power button to switch off the phone.
 
-* CyanogenMod 11 M9: http://build.maui-project.org/phone/cm-11-20140805-SNAPSHOT-M9-hammerhead.zip
-* Original Source: http://download.cyanogenmod.org/?device=hammerhead&type=snapshot
-* Plasma Phone Milestone 1 image (only access via ssh): http://dev.plasma-mobile.org/phone/maui-lge-hammerhead-0.2.1.zip
+ubuntu-device-flash --server="http://system-image.tasemnice.eu" touch --channel="ubuntu-touch/devel" --bootstrap
 
+* start into TWRP
+* Pick Reboot, then "Bootloader"
 
-## Flash images
+System then downloads the hammerhead image from the specified server, pushes them to the server and installs a script that flashes the device, it then reboots the device, and it flashes itself.
 
-From the TWRP main menu:
+The device will at some point (ca 5min on my system with fast connection) show the ubuntu logo spinning. This takes another 5 minutes, then it reboots, the google logo shows, and shortly thereafter our spinning ubuntu logo again. After about 1 minute, it's done, and I'm greeted with the welcome screen.
 
-* Tap "Wipe"
-* Tap "Advanced Wipe"
-* Select all items
-* Swipe to Wipe
-* Tap "Back"
-* Tap the "Home" symbol (=small house) in lower left corner
-
-Upload the CM release running this from the Linux host (this can take a while without output on the screen):
-
-```sh
-sudo adb push cm-11-20140805-SNAPSHOT-M9-hammerhead.zip /sdcard/
-```
-
-Upload Plasma Phone running this from the Linux host (again wait to finish):
-
-```sh
-sudo adb push maui-lge-hammerhead-0.2.1.zip /sdcard/
-```
-
-From the TWRP main menu:
-
-* Tap "Install"
-* Select cm-11-20140805-SNAPSHOT-M9-hammerhead.zip from /sdcard
-* Tap "Add More Zips"
-* Select maui-lge-hammerhead-0.2.1.zip from /sdcard
-* Swipe to confirm flash (this can take a while, watch the messages for errors)
-* Tap "Reboot system"
-
-## Connect to the device via SSH
-
-Now the phone seems to be actually stuck just showing the Google logo and unlocked key symbol below.
-
-That is normal, as no graphical stack has been installed with the milestone 1 kit.
-
-But you can actually connect to the device, as the phone listen to the 192.168.2.15 IP and offers a debug telnet on port 2323 and ssh.
-
-Connect using ssh as user: "maui" (password is also "maui"):
-
-```sh
-ssh maui@192.168.2.15
-```
-
-Congratulations! You have at this point succesfully established root access on a completely new and free basic system on your Nexus 5! 
-
-
-## Milestone 2 (boot into graphical shell)
-
-Download:
-
-* Plasma Phone Milestone 2 image (graphical shell): http://dev.plasma-mobile.org/phone/maui-lge-hammerhead-0.2.1.zip
-
-
-From the TWRP main menu:
-
-Upload the CM release running this from the Linux host (this can take a while without output on the screen):
-
-```sh
-sudo adb push cm-11-20140805-SNAPSHOT-M9-hammerhead.zip /sdcard/
-```
-
-Upload Plasma Phone running this from the Linux host (again wait to finish):
-
-```sh
-sudo adb push maui-lge-hammerhead-0.2.1.zip /sdcard/
-```
-
-From the TWRP main menu:
-
-* Tap "Install"
-* Select cm-11-20140805-SNAPSHOT-M9-hammerhead.zip from /sdcard
-* Tap "Add More Zips"
-* Select maui-lge-hammerhead-0.2.1.zip from /sdcard
-* Swipe to confirm flash (this can take a while, watch the messages for errors)
-* Tap "Reboot system"
 
 
