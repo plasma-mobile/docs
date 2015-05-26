@@ -90,6 +90,12 @@ Note: You need to edit ~/.config/plasma-org.kde.satellite.phone-appletsrc to con
         
 ## Building apps locally
 
+You can build anything on the phone, if you've got enough space on the root partition to install the development tools and dev packages you need. You can also build on the arm-phone server.
+
+          IP Address: 212.47.241.146
+          
+If you want to create packages locally, you need to add a debian directory and use debuild: there is nothing special about it.          
+
 ## Installation and Device-Deployment
 
 ## Building on the arm server
