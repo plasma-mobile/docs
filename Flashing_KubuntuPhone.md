@@ -138,3 +138,6 @@ The device will at some point (ca 5min on my system with fast connection) show t
 
 Now follow the instructions for your <a href="Development_Setup.md">Development Setup</a> to get going.
 
+To flash our image directly, use instead the command
+
+ubuntu-device-flash --server="http://kubuntu.plasma-mobile.org/" touch --channel="kubuntu-phone/devel-proposed" --bootstrap 
