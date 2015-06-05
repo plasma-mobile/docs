@@ -23,6 +23,13 @@ Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by fla
         sudo setprop persist.service.ssh true
         sudo reboot
 
+### To start network with nmcli
+
+        nmcli c add con-name CONNECTIONNAME ifname wlan0 type wifi ssid SSIDGOESHERE
+        nmcli c modify CONNECTIONNAME wifi-sec.key-mgmt wpa-psk
+        nmcli c modify CONNECTIONNAME wifi-sec.psk PASSWORDGOESHERE
+        nmcli c up CONNECTIONNAME
+
 ### To install our stuff
 
 First remove a bunch of existing packages to make space. See the end of this document for my list. then add our own repo:
