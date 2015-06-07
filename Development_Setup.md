@@ -13,9 +13,10 @@ Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by fla
         sudo reboot
 
 ### edit /etc/init/ssh.override
-    
-        manual
-        exec /usr/sbin/sshd -D -o PasswordAuthentication=yes
+
+        sudo bash
+        echo manual > /etc/init/ssh.override
+        echo "exec /usr/sbin/sshd -D -o PasswordAuthentication=yes" >> /etc/init/ssh.override
         
 ### To make ssh start persistently. The ssh password is 1234 or whatever you setup for unlocking the phone
 
@@ -29,6 +30,8 @@ Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by fla
         nmcli c modify CONNECTIONNAME wifi-sec.key-mgmt wpa-psk
         nmcli c modify CONNECTIONNAME wifi-sec.psk PASSWORDGOESHERE
         nmcli c up CONNECTIONNAME
+	sudo bash
+	echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
 ### To install our stuff
 
