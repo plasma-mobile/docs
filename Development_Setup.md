@@ -24,14 +24,12 @@ Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by fla
         sudo setprop persist.service.ssh true
         sudo reboot
 
-### To start network with nmcli
+### To connect to the network use wifi-setup
+```sh
+writable-root
+wifi-setup SSID PSWD
+```
 
-        nmcli c add con-name CONNECTIONNAME ifname wlan0 type wifi ssid SSIDGOESHERE
-        nmcli c modify CONNECTIONNAME wifi-sec.key-mgmt wpa-psk
-        nmcli c modify CONNECTIONNAME wifi-sec.psk PASSWORDGOESHERE
-        nmcli c up CONNECTIONNAME
-	sudo bash
-	echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
 ### To install our stuff
 
