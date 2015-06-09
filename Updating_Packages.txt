@@ -1,6 +1,8 @@
 
 
+adb shell
+
 Since root partition is Read-only, first execute this:
 
-sudo mount -o rw,remount /dev/loop1 /
+sudo mount -o rw,remount /dev/loop1 /   (password is '1234')
 sudo apt-get update
