@@ -64,35 +64,6 @@ If kded5 has crashed, you may have to start it manually:
 
          /usr/bin/kded5&
         
-Note: You need to edit ~/.config/plasma-org.kde.satellite.phone-appletsrc to contain:
-
-         [Containments][1]
-         activityId=//leave the existing value unchanged
-         formfactor=0
-         immutability=1
-         lastScreen=0
-         location=0
-         plugin=org.kde.phone.homescreen
-         wallpaperplugin=org.kde.image
-
-         [Containments][1][Applets][3]
-         immutability=1
-         plugin=org.kde.phone.notifications
-
-         [Containments][2]
-         activityId=
-         formfactor=2
-         immutability=1
-         lastScreen=0
-         location=3
-         plugin=org.kde.phone.panel
-         wallpaperplugin=org.kde.image
-
-         [Containments][2][Applets][4]
-         immutability=1
-         plugin=org.kde.phone.quicksettings
-        
-        
 ## Building apps locally
 
 You can build anything on the phone, if you've got enough space on the root partition to install the development tools and dev packages you need. You can also build on the arm-phone server.
