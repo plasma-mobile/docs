@@ -1,6 +1,7 @@
 
 
 adb shell
+wifi-setup Teaparty Silikonbeach
 
 Since root partition is Read-only, first execute this:
 
