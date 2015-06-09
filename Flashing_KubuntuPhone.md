@@ -140,4 +140,4 @@ Now follow the instructions for your <a href="Development_Setup.md">Development 
 
 To flash our image directly, use instead the command
 
-ubuntu-device-flash --server="http://kubuntu.plasma-mobile.org/" touch --channel="kubuntu-phone/devel-proposed" --bootstrap 
+ubuntu-device-flash --server="http://kubuntu.plasma-mobile.org" touch --channel="kubuntu-phone/devel" --bootstrap --developer-mode --password 1234
