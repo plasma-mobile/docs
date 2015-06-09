@@ -25,11 +25,8 @@ Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by fla
         sudo reboot
 
 ### To connect to the network use wifi-setup
-```sh
-writable-root
-wifi-setup SSID PSWD
-```
-
+        writable-root
+        wifi-setup SSID PSWD
 
 ### To install our stuff
 
