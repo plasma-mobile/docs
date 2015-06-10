@@ -1,9 +1,10 @@
 
-
 adb shell
+
+# since root partition is Read-only, first execute this:
+sudo mount -o rw,remount /dev/loop1 /   #(password is '1234')
+sudo reboot
+
 wifi-setup Teaparty Silikonbeach
 
-Since root partition is Read-only, first execute this:
-
-sudo mount -o rw,remount /dev/loop1 /   (password is '1234')
 sudo apt-get update
