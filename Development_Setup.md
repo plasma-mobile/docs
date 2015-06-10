@@ -72,6 +72,7 @@ If you want to create packages locally, you need to add a debian directory and u
 Maliit needs plasma-maliit-framework and plasma-maliit-plugins. You can start Maliit by:
 
         export QT_IM_MODULE=maliit
+        export MALIIT_KEYBOARD_DATA_DIR=${PREFIX}/share/maliit/plugins/org/maliit/ (where ${PREFIX} is where you installed the keyboard plugins to)
         export MALIIT_DEBUG=1
         maliit-server &
         
