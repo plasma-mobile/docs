@@ -67,6 +67,23 @@ You can build anything on the phone, if you've got enough space on the root part
           
 If you want to create packages locally, you need to add a debian directory and use debuild: there is nothing special about it.          
 
+## Maliit
+
+Maliit needs plasma-maliit-framework and plasma-maliit-plugins. You can start Maliit by:
+
+        export QT_IM_MODULE=maliit
+        export MALIIT_DEBUG=1
+        maliit-server &
+        
+The /etc/xdg/maliit.org/server.conf determines which keyboard is being used:
+
+        [maliit]
+        ; onscreen\active=libmaliit-keyboard-plugin.so:en_us
+        onscreen\active=nemo-keyboard.qml:en_us
+        ; onscreen\active=libubuntu-keyboard-plugin.so:en_us
+
+
+
 ## Installation and Device-Deployment
 
 ## Building on the arm server
