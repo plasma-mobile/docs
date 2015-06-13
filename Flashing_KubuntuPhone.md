@@ -162,9 +162,9 @@ tl;dr (on the device)
 
 The verbose version (so you know what's going on):
 
-        sudo touch /userdata/.writable_image
-        sudo touch /userdata/.adb_onlock
-        sudo reboot
+ sudo touch /userdata/.writable_image
+ sudo touch /userdata/.adb_onlock
+ sudo reboot
 
 ### Enable SSH access
 
@@ -173,13 +173,13 @@ tl;dr (on the device)
 
 The verbose version (so you know what's going on):
 
-        sudo bash
-        echo manual > /etc/init/ssh.override
-        echo "exec /usr/sbin/sshd -D -o PasswordAuthentication=yes" >> /etc/init/ssh.override
+ sudo bash
+ echo manual > /etc/init/ssh.override
+ echo "exec /usr/sbin/sshd -D -o PasswordAuthentication=yes" >> /etc/init/ssh.override
 
-        sudo service ssh start
-        sudo setprop persist.service.ssh true
-        sudo reboot
+ sudo service ssh start
+ sudo setprop persist.service.ssh true
+ sudo reboot
 
 ### Connect Wifi
 
