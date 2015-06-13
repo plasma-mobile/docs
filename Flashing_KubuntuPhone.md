@@ -140,7 +140,7 @@ Now follow the instructions for your <a href="Development_Setup.md">Development 
 
 To flash our image directly, use instead the command
 
-ubuntu-device-flash --server="http://kubuntu.plasma-mobile.org" touch --channel="kubuntu-phone/devel-proposed" --bootstrap --developer-mode --password 1234
+```ubuntu-device-flash --server="http://kubuntu.plasma-mobile.org" touch --channel="kubuntu-phone/devel-proposed" --bootstrap --developer-mode --password 1234```
 
 This will take some time, it'll reboot, display a spinning logo for a while, and then finally reboot into the Plasma Shell.
 
@@ -161,11 +161,11 @@ tl;dr (on the device)
 ``` sudo writable-root && sudo reboot ```
 
 The verbose version (so you know what's going on):
-
- sudo touch /userdata/.writable_image
- sudo touch /userdata/.adb_onlock
- sudo reboot
-
+```
+sudo touch /userdata/.writable_image
+sudo touch /userdata/.adb_onlock
+sudo reboot
+```
 ### Enable SSH access
 
 tl;dr (on the device)
@@ -173,13 +173,13 @@ tl;dr (on the device)
 
 The verbose version (so you know what's going on):
 ```
-  sudo bash
-  echo manual > /etc/init/ssh.override
-  echo "exec /usr/sbin/sshd -D -o PasswordAuthentication=yes" >> /etc/init/ssh.override
+sudo bash
+echo manual > /etc/init/ssh.override
+echo "exec /usr/sbin/sshd -D -o PasswordAuthentication=yes" >> /etc/init/ssh.override
 
-  sudo service ssh start
-  sudo setprop persist.service.ssh true
-  sudo reboot
+sudo service ssh start
+sudo setprop persist.service.ssh true
+sudo reboot
 ```
 ### Connect Wifi
 
