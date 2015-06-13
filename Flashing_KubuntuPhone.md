@@ -172,7 +172,7 @@ tl;dr (on the device)
 ``` sudo ssh-setup```
 
 The verbose version (so you know what's going on):
-
+```
   sudo bash
   echo manual > /etc/init/ssh.override
   echo "exec /usr/sbin/sshd -D -o PasswordAuthentication=yes" >> /etc/init/ssh.override
@@ -180,7 +180,7 @@ The verbose version (so you know what's going on):
   sudo service ssh start
   sudo setprop persist.service.ssh true
   sudo reboot
-
+```
 ### Connect Wifi
 
 We've included a small script which sets up a wifi connection (WPA-PSK) for NetworkManager.
