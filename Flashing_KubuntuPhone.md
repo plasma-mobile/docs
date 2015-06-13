@@ -141,3 +141,50 @@ Now follow the instructions for your <a href="Development_Setup.md">Development 
 To flash our image directly, use instead the command
 
 ubuntu-device-flash --server="http://kubuntu.plasma-mobile.org" touch --channel="kubuntu-phone/devel-proposed" --bootstrap --developer-mode --password 1234
+
+This will take some time, it'll reboot, display a spinning logo for a while, and then finally reboot into the Plasma Shell.
+
+
+## Basic Device Setup
+
+Install a fresh Ubuntu-phone vivid vervet image, either using multirom or by flashing directly. After installation and enabling developer mode, enable ssh:
+
+Make sure the device is connected through your USB port, then log in to it using
+
+```sudo adb shell```
+
+### Writable root
+
+By default, the root filesystem is read-only. Not too useful for developers. To make it writable, do the following:
+
+tl;dr (on the device)
+``` sudo writable-root && sudo reboot ```
+
+The verbose version (so you know what's going on):
+
+        sudo touch /userdata/.writable_image
+        sudo touch /userdata/.adb_onlock
+        sudo reboot
+
+### Enable SSH access
+
+tl;dr (on the device)
+``` sudo ssh-setup```
+
+The verbose version (so you know what's going on):
+
+        sudo bash
+        echo manual > /etc/init/ssh.override
+        echo "exec /usr/sbin/sshd -D -o PasswordAuthentication=yes" >> /etc/init/ssh.override
+
+        sudo service ssh start
+        sudo setprop persist.service.ssh true
+        sudo reboot
+
+### Connect Wifi
+
+We've included a small script which sets up a wifi connection (WPA-PSK) for NetworkManager.
+
+```wifi-setup SSID PASSWORD```
+
+If you're using a different security mechanism for your wifi network, it's time to read the nmcli documentation. Look into /usr/bin/wifi-setup for inspiration.
