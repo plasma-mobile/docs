@@ -132,17 +132,10 @@ ubuntu-device-flash --server="http://system-image.tasemnice.eu" touch --channel=
 * start into TWRP
 * Pick Reboot, then "Bootloader"
 
-System then downloads the hammerhead image from the specified server, pushes them to the server and installs a script that flashes the device, it then reboots the device, and it flashes itself.
-
-The device will at some point (ca 5min on my system with fast connection) show the ubuntu logo spinning. This takes another 5 minutes, then it reboots, the google logo shows, and shortly thereafter our spinning ubuntu logo again. After about 1 minute, it's done, and I'm greeted with the welcome screen.
-
-Now follow the instructions for your <a href="Development_Setup.md">Development Setup</a> to get going.
-
-To flash our image directly, use instead the command
-
 ```ubuntu-device-flash --server="http://kubuntu.plasma-mobile.org" touch --channel="kubuntu-phone/devel-proposed" --bootstrap --developer-mode --password 1234```
 
-This will take some time, it'll reboot, display a spinning logo for a while, and then finally reboot into the Plasma Shell.
+
+The device will at some point (ca 5min on my system with fast connection) show the ubuntu logo spinning. This takes another 5 minutes, then it reboots, the google logo shows, and shortly thereafter our spinning ubuntu logo again. After about 1 minute, it's done, and I'm greeted with the welcome screen.
 
 
 ## Basic Device Setup
@@ -188,3 +181,7 @@ We've included a small script which sets up a wifi connection (WPA-PSK) for Netw
 ```wifi-setup SSID PASSWORD```
 
 If you're using a different security mechanism for your wifi network, it's time to read the nmcli documentation. Look into /usr/bin/wifi-setup for inspiration.
+
+### On and on...
+
+Now follow the instructions for your <a href="Development_Setup.md">Development Setup</a> to get going.
