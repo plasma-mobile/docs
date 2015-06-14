@@ -132,8 +132,13 @@ ubuntu-device-flash --server="http://system-image.tasemnice.eu" touch --channel=
 * start into TWRP
 * Pick Reboot, then "Bootloader"
 
+```ubuntu-device-flash --server="http://kubuntu.plasma-mobile.org" touch --channel="kubuntu-phone/devel" --bootstrap --developer-mode --password 1234```
+
+or, if you want to live on the bleeding edge, flash the latest, untested image with:
+
 ```ubuntu-device-flash --server="http://kubuntu.plasma-mobile.org" touch --channel="kubuntu-phone/devel-proposed" --bootstrap --developer-mode --password 1234```
 
+("devel-proposed" instead of just "devel")
 
 The device will at some point (ca 5min on my system with fast connection) show the ubuntu logo spinning. This takes another 5 minutes, then it reboots, the google logo shows, and shortly thereafter our spinning ubuntu logo again. After about 1 minute, it's done, and I'm greeted with the welcome screen.
 
