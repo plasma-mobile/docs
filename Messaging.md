@@ -8,10 +8,13 @@ Provide a user-friendly, Free and openly developed operating system for phones
 
 ## Brand Definitions
 
-Plasma Mobile: The plasmashell implementation and components specific for the handset formfactor (developer facing)
+### "Plasma Mobile"
 
-Plasma Phone: Fully integrated operating system running Plasma (user facing), includes Maliit, Kubuntu images, apps, kitchen sink, ...; a.k.a. "The Product"
+The plasmashell implementation and components specific for the handset formfactor (developer facing)
 
+### "Plasma Phone"
+
+Fully integrated operating system running Plasma (user facing), includes Maliit, Kubuntu images, apps, kitchen sink, ...; a.k.a. "The Product"
 
 
 ## Catch Phrases
