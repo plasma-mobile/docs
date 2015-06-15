@@ -127,7 +127,6 @@ Once installed, the TWRP main menu screen will appear.
 
 Then connect the device to the host system via USB and boot into bootloader using volume up and the power button to switch off the phone.
 
-ubuntu-device-flash --server="http://system-image.tasemnice.eu" touch --channel="ubuntu-touch/devel" --bootstrap
 
 * start into TWRP
 * Pick Reboot, then "Bootloader"
