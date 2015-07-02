@@ -154,9 +154,10 @@ Make sure the device is connected through your USB port, then log in to it using
 
 By default, the root filesystem is read-only. Not too useful for
 developers. A script is run on first boot to make it writable and
-makes a stamp file plasma-phone-devel-setup-run, check this file
-exists then run ```sudo reboot``` and it will boot up with writable
-root.
+makes a stamp file ```plasma-phone-devel-setup-run```, check this file
+exists then run
+
+```sudo reboot``` and it will boot up with writable root.
 
 The verbose version (so you know what's going on):
 ```
@@ -167,11 +168,11 @@ sudo reboot
 ### Enable SSH access
 
 After reboot above for writeable root it should then run sshd, it will
-make the stamp file plasma-phone-devel-setup2-run.  If not run it
-manually:
+make the stamp file ```plasma-phone-devel-setup2-run```.
 
-tl;dr (on the device)
-``` sudo ssh-setup```
+If not run it manually:
+
+```sudo ssh-setup```
 
 The verbose version (so you know what's going on):
 ```
