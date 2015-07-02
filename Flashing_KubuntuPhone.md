@@ -152,10 +152,11 @@ Make sure the device is connected through your USB port, then log in to it using
 
 ### Writable root
 
-By default, the root filesystem is read-only. Not too useful for developers. To make it writable, do the following:
-
-tl;dr (on the device)
-``` sudo writable-root && sudo reboot ```
+By default, the root filesystem is read-only. Not too useful for
+developers. A script is run on first boot to make it writable and
+makes a stamp file plasma-phone-devel-setup-run, check this file
+exists then run ```sudo reboot``` and it will boot up with writable
+root.
 
 The verbose version (so you know what's going on):
 ```
@@ -164,6 +165,10 @@ sudo touch /userdata/.adb_onlock
 sudo reboot
 ```
 ### Enable SSH access
+
+After reboot above for writeable root it should then run sshd, it will
+make the stamp file plasma-phone-devel-setup2-run.  If not run it
+manually:
 
 tl;dr (on the device)
 ``` sudo ssh-setup```
@@ -180,9 +185,11 @@ sudo reboot
 ```
 ### Connect Wifi
 
-We've included a small script which sets up a wifi connection (WPA-PSK) for NetworkManager.
+We've included a small script which sets up a wifi connection
+(WPA-PSK) for NetworkManager.  This can be run once writeable root is
+set up (as above).
 
-```wifi-setup SSID PASSWORD```
+```sudo wifi-setup SSID PASSWORD```
 
 If you're using a different security mechanism for your wifi network, it's time to read the nmcli documentation. Look into /usr/bin/wifi-setup for inspiration.
 
