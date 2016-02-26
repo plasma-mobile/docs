@@ -25,6 +25,19 @@ Deleted inode 32055 has zero dtime.  Fix? yes
 lots of output...
 ```
 
+if that complains,
+
+WARNING!!!  The filesystem is mounted.   If you continue you ***WILL***
+cause ***SEVERE*** filesystem damage.
+
+Instead of doing this in system, reboot into recovery, cd into
+
+```
+/data/media/0/multirom/roms/«your rom name»/data/
+```
+
+and follow all steps there.
+
 * once done.. increase the number we noted in step number 1.. (512000, I
 usually double that..) and with that number
 
